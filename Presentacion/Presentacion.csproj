@@ -49,10 +49,6 @@
       <Project>{1cc29343-c0c7-451c-9f2b-2b47238dc9e9}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Negocio\Negocio.csproj">
-      <Project>{c589fb0c-3bbf-41aa-b9f6-67cb686823db}</Project>
-      <Name>Negocio</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
