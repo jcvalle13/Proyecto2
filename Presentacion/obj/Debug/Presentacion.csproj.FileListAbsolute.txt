@@ -1,0 +1,9 @@
+C:\Users\jcval\source\repos\Proyecto2\Presentacion\bin\Debug\Presentacion.dll
+C:\Users\jcval\source\repos\Proyecto2\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\jcval\source\repos\Proyecto2\Presentacion\bin\Debug\Entidades.dll
+C:\Users\jcval\source\repos\Proyecto2\Presentacion\bin\Debug\Entidades.pdb
+C:\Users\jcval\source\repos\Proyecto2\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
+C:\Users\jcval\source\repos\Proyecto2\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\jcval\source\repos\Proyecto2\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\jcval\source\repos\Proyecto2\Presentacion\obj\Debug\Presentacion.dll
+C:\Users\jcval\source\repos\Proyecto2\Presentacion\obj\Debug\Presentacion.pdb
