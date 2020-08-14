@@ -1,2 +1,17 @@
 C:\Users\jcval\source\repos\Solution1\Servicios\obj\Debug\Servicios.csprojAssemblyReference.cache
 C:\Users\jcval\source\repos\Solution1\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\jcval\source\repos\Proyecto2\Servicios\obj\Debug\Servicios.csprojAssemblyReference.cache
+C:\Users\jcval\source\repos\Proyecto2\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\jcval\source\repos\Proyecto2\Servicios\bin\Servicios.dll.config
+C:\Users\jcval\source\repos\Proyecto2\Servicios\bin\Servicios.dll
+C:\Users\jcval\source\repos\Proyecto2\Servicios\bin\Servicios.pdb
+C:\Users\jcval\source\repos\Proyecto2\Servicios\bin\Entidades.dll
+C:\Users\jcval\source\repos\Proyecto2\Servicios\bin\Negocio.dll
+C:\Users\jcval\source\repos\Proyecto2\Servicios\bin\AccesoDatos.dll
+C:\Users\jcval\source\repos\Proyecto2\Servicios\bin\Entidades.pdb
+C:\Users\jcval\source\repos\Proyecto2\Servicios\bin\Negocio.pdb
+C:\Users\jcval\source\repos\Proyecto2\Servicios\bin\AccesoDatos.pdb
+C:\Users\jcval\source\repos\Proyecto2\Servicios\bin\AccesoDatos.dll.config
+C:\Users\jcval\source\repos\Proyecto2\Servicios\obj\Debug\Servicios.csproj.CopyComplete
+C:\Users\jcval\source\repos\Proyecto2\Servicios\obj\Debug\Servicios.dll
+C:\Users\jcval\source\repos\Proyecto2\Servicios\obj\Debug\Servicios.pdb

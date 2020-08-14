@@ -3,13 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "..\Proyecto2\AccesoDatos\AccesoDatos.csproj", "{D2F3A152-68A4-410A-8B93-7CA72B1AA9D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "AccesoDatos\AccesoDatos.csproj", "{D2F3A152-68A4-410A-8B93-7CA72B1AA9D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "..\Proyecto2\Entidades\Entidades.csproj", "{1CC29343-C0C7-451C-9F2B-2B47238DC9E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{1CC29343-C0C7-451C-9F2B-2B47238DC9E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "..\Proyecto2\Negocio\Negocio.csproj", "{C589FB0C-3BBF-41AA-B9F6-67CB686823DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{C589FB0C-3BBF-41AA-B9F6-67CB686823DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "..\Proyecto2\Presentacion\Presentacion.csproj", "{6BC6C4B8-B4BB-48FE-95F6-CB1316A1231E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "Presentacion\Presentacion.csproj", "{6BC6C4B8-B4BB-48FE-95F6-CB1316A1231E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2E0C9255-BA07-46DA-9BC2-B6ABBBB27133} = {2E0C9255-BA07-46DA-9BC2-B6ABBBB27133}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicios", "Servicios\Servicios.csproj", "{2E0C9255-BA07-46DA-9BC2-B6ABBBB27133}"
 EndProject

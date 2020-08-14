@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Servicios" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50957/Servicios.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50957/Servicios.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50957/Servicios.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Entidades" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicios_AgregarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_AgregarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_ModificarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_ModificarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_Consultar_Usuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:Consultar_Usuarios" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_Consultar_Usuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Consultar_UsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_VerificarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_VerificarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_Consultar_Permisos_Usuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:Consultar_Permisos_Usuarios" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_Consultar_Permisos_Usuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Consultar_Permisos_UsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_EliminarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_EliminarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_AgregarPerfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarPerfil" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_AgregarPerfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarPerfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_ModificarPerfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarPerfil" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_ModificarPerfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarPerfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_EliminarPerfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPerfil" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_EliminarPerfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPerfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_ConsultarPerfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPerfiles" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_ConsultarPerfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPerfilesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicios">
+    <wsdl:operation name="AgregarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/AgregarUsuario" message="tns:IServicios_AgregarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/AgregarUsuarioResponse" message="tns:IServicios_AgregarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/ModificarUsuario" message="tns:IServicios_ModificarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ModificarUsuarioResponse" message="tns:IServicios_ModificarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Usuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/Consultar_Usuarios" message="tns:IServicios_Consultar_Usuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/Consultar_UsuariosResponse" message="tns:IServicios_Consultar_Usuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/VerificarUsuario" message="tns:IServicios_VerificarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/VerificarUsuarioResponse" message="tns:IServicios_VerificarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Permisos_Usuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/Consultar_Permisos_Usuarios" message="tns:IServicios_Consultar_Permisos_Usuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/Consultar_Permisos_UsuariosResponse" message="tns:IServicios_Consultar_Permisos_Usuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/EliminarUsuario" message="tns:IServicios_EliminarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/EliminarUsuarioResponse" message="tns:IServicios_EliminarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarPerfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/AgregarPerfil" message="tns:IServicios_AgregarPerfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/AgregarPerfilResponse" message="tns:IServicios_AgregarPerfil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarPerfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/ModificarPerfil" message="tns:IServicios_ModificarPerfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ModificarPerfilResponse" message="tns:IServicios_ModificarPerfil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPerfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/EliminarPerfil" message="tns:IServicios_EliminarPerfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/EliminarPerfilResponse" message="tns:IServicios_EliminarPerfil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPerfiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/ConsultarPerfiles" message="tns:IServicios_ConsultarPerfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ConsultarPerfilesResponse" message="tns:IServicios_ConsultarPerfiles_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicios" type="tns:IServicios">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AgregarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicios/AgregarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicios/ModificarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Usuarios">
+      <soap:operation soapAction="http://tempuri.org/IServicios/Consultar_Usuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicios/VerificarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Permisos_Usuarios">
+      <soap:operation soapAction="http://tempuri.org/IServicios/Consultar_Permisos_Usuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicios/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarPerfil">
+      <soap:operation soapAction="http://tempuri.org/IServicios/AgregarPerfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarPerfil">
+      <soap:operation soapAction="http://tempuri.org/IServicios/ModificarPerfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPerfil">
+      <soap:operation soapAction="http://tempuri.org/IServicios/EliminarPerfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPerfiles">
+      <soap:operation soapAction="http://tempuri.org/IServicios/ConsultarPerfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Servicios">
+    <wsdl:port name="BasicHttpBinding_IServicios" binding="tns:BasicHttpBinding_IServicios">
+      <soap:address location="http://localhost:50957/Servicios.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
