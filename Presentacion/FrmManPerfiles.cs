@@ -230,20 +230,24 @@ namespace Presentacion
             txtDescripcion.Text = dgvPerfiles.Rows[e.RowIndex].Cells[1].Value.ToString();
             cboPerfiles.SelectedValue = dgvPerfiles.Rows[e.RowIndex].Cells[2].Value.ToString();//.Equals("Activo") ? true : false;
         }
-
-        private void btnatras_Click(object sender, EventArgs e)
+        private void btnatras_Clic(object sender, EventArgs e)
         {
-
 
             FrmMenu frm = new FrmMenu();
             frm.Show();
             this.Hide();
         }
 
+    }
+
+
+
+
 
         #endregion
 
         #endregion
+
 
     }
 }

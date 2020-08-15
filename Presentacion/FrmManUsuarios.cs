@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 
@@ -104,7 +99,7 @@ namespace Presentacion
                     u.Contraseña = txtcontraseña.Text.Trim();
                     u.Estado = (cboestado.SelectedValue.ToString().Equals("true")) ? true : false;
 
-                    Negocio.LNegocio.AgregarUsuario(u);
+                    Negocio.LogicNegocio.AgregarUsuario(u);
                     MessageBox.Show("Usuario agregado");
                     limpiar();
 
@@ -144,7 +139,7 @@ namespace Presentacion
 
         private void btnmenu_Click(object sender, EventArgs e)
         {
-            frmMenu frm = new frmMenu();
+            FrmMenu frm = new FrmMenu();
             frm.Show();
             this.Hide();
         }
@@ -157,7 +152,7 @@ namespace Presentacion
 
                 u.Usuario = txtUsuario.Text.Trim();
 
-                LNegocio.EliminarUsuario(u);
+                LogicNegocio.EliminarUsuario(u);
                 MessageBox.Show("Usuario Eliminado");
                 limpiar();
 
@@ -171,4 +166,4 @@ namespace Presentacion
         }
     }
 }
-}
+

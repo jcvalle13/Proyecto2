@@ -105,7 +105,7 @@
             // 
             // btnIngreso
             // 
-            this.btnIngreso.Location = new System.Drawing.Point(343, 291);
+            this.btnIngreso.Location = new System.Drawing.Point(343, 284);
             this.btnIngreso.Name = "btnIngreso";
             this.btnIngreso.Size = new System.Drawing.Size(84, 37);
             this.btnIngreso.TabIndex = 4;
@@ -138,7 +138,7 @@
             // 
             this.groupBox3.Location = new System.Drawing.Point(0, 81);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(279, 59);
+            this.groupBox3.Size = new System.Drawing.Size(287, 59);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
