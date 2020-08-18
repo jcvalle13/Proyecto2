@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Negocio;
 using Entidades;
 
 namespace Presentacion
@@ -43,7 +35,7 @@ namespace Presentacion
                 objusuario.Contraseña = txtClave.Text.Trim();
                 objusuario.Estado = true;
 
-                if (LogicNegocio.VerificarUsuario(objusuario))
+                if (GestorConexiones.GestorConexion_Servicios.VerificarUsuario(objusuario))
 
                 {
                     MessageBox.Show("USUARIO CORRECTO", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -74,11 +66,6 @@ namespace Presentacion
             }
         }
 
-        private void btnregresar_Click(object sender, EventArgs e)
-        {
-            FrmInicio frm = new FrmInicio();
-            frm.Show();
-            this.Hide();
-        }
+       
     }
 }

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-//using System.Windows.Forms;
+using System.Windows.Forms;
 
 namespace Presentacion
 {
@@ -16,9 +12,9 @@ namespace Presentacion
         [STAThread]
         static void Main()
         {
-            /*Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmInicio());*/
+            Application.Run(new FrmLogin());
         }
     }
 }

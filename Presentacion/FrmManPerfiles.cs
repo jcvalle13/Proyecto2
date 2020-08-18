@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-using Negocio;
+
 
 namespace Presentacion
 {
@@ -50,9 +45,9 @@ namespace Presentacion
                 lstresultado = new List<Perfiles>();
 
                 if (txtBuscar.Text.Length == 0 || txtBuscar.Text.Equals("0"))
-                    lstresultado = LogicNegocio.ConsultarPerfiles(new Perfiles { cod_perfil = 0 });
+                    lstresultado = GestorConexiones.GestorConexion_Servicios.ConsultarPerfiles(new Perfiles { cod_perfil = 0 });
                 else
-                    lstresultado = LogicNegocio.ConsultarPerfiles(new Perfiles { cod_perfil = Convert.ToInt32(txtBuscar.Text) });
+                    lstresultado = GestorConexiones.GestorConexion_Servicios.ConsultarPerfiles(new Perfiles { cod_perfil = Convert.ToInt32(txtBuscar.Text) });
 
                 dgvPerfiles.DataSource = null;
                 dgvPerfiles.Refresh();
@@ -143,7 +138,7 @@ namespace Presentacion
                     perfil_user.descripcion = txtDescripcion.Text.Trim();
                     perfil_user.estado = (cboPerfiles.SelectedValue.ToString().Equals("true")) ? true : false;
 
-                    LogicNegocio.AgregarPerfil(perfil_user);
+                    GestorConexiones.GestorConexion_Servicios.AgregarPerfil(perfil_user);
                     MessageBox.Show("Perfil Nuevo agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     limpiar();
@@ -169,7 +164,7 @@ namespace Presentacion
                     p.descripcion = txtDescripcion.Text.Trim();
                     p.estado = (cboPerfiles.SelectedValue.ToString().Equals("true")) ? true : false;
 
-                    LogicNegocio.ModificarPerfil(p);
+                    GestorConexiones.GestorConexion_Servicios.ModificarPerfil(p);
                     MessageBox.Show("Perfil modificado");
                     limpiar();
                     CargarLista();
@@ -198,7 +193,7 @@ namespace Presentacion
 
                     p.cod_perfil = Convert.ToInt32(txtcodigoperfil.Text.Trim());
 
-                    LogicNegocio.EliminarPerfil(p);
+                    GestorConexiones.GestorConexion_Servicios.EliminarPerfil(p);
                     MessageBox.Show("Perfil eliminado");
                     limpiar();
                     CargarLista();
@@ -241,13 +236,9 @@ namespace Presentacion
     }
 
 
-
-
-
         #endregion
 
         #endregion
 
 
-    }
 }

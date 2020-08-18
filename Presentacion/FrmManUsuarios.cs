@@ -99,7 +99,7 @@ namespace Presentacion
                     u.Contraseña = txtcontraseña.Text.Trim();
                     u.Estado = (cboestado.SelectedValue.ToString().Equals("true")) ? true : false;
 
-                    Negocio.LogicNegocio.AgregarUsuario(u);
+                    GestorConexiones.GestorConexion_Servicios.AgregarUsuario(u);
                     MessageBox.Show("Usuario agregado");
                     limpiar();
 
@@ -124,7 +124,7 @@ namespace Presentacion
                     u.Contraseña = txtcontraseña.Text.Trim();
                     u.Estado = (cboestado.SelectedValue.ToString().Equals("true")) ? true : false;
 
-                    Negocio.LNegocio.ModificarUsuario(u);
+                    GestorConexiones.GestorConexion_Servicios.ModificarUsuario(u);
                     MessageBox.Show("Usuario modificado");
                     limpiar();
 
@@ -152,7 +152,7 @@ namespace Presentacion
 
                 u.Usuario = txtUsuario.Text.Trim();
 
-                LogicNegocio.EliminarUsuario(u);
+                GestorConexiones.GestorConexion_Servicios.EliminarUsuario(u);
                 MessageBox.Show("Usuario Eliminado");
                 limpiar();
 
