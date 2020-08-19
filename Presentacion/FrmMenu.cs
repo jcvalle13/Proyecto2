@@ -22,11 +22,7 @@ namespace Presentacion
 
             mantenimientosToolStripMenuItem.Visible = false;
             consultasToolStripMenuItem.Visible = false;
-            
-
-
-
-
+           
             foreach (Usuarios item in lstusuarios)
             {
                 switch (item.Perfiles.cod_perfil)
@@ -45,36 +41,46 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        private void LogoffToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Conexion Finalizada");
-            Application.Exit();
-
-        }
+    
         private void perfilesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FrmManPerfiles frm = new FrmManPerfiles();
-            //frm.MdiParent = this;
+            frm.MdiParent = this;
             frm.Show();
-            this.Hide();
+            //this.Hide();
         }
 
         private void usuariosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FrmManUsuarios frm = new FrmManUsuarios();
+            frm.MdiParent = this;
             frm.Show();
-            this.Hide();
+            //this.Hide();
         }
 
 
         private void listadoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmConsultaClientes frm = new FrmConsultaClientes();
+            frm.MdiParent = this;
             frm.Show();
             this.Hide();
         }
 
+        private void LogoffToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Conexion Finalizada");
+            Application.Exit();
 
+
+        }
+
+        private void regresarAlInicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmLogin frm = new FrmLogin();
+            frm.Show();
+            this.Hide();
+        }
     }
 
 }

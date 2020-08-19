@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManUsuarios));
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnmenu = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
@@ -39,15 +40,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btneliminar
             // 
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btneliminar.Location = new System.Drawing.Point(283, 140);
+            this.btneliminar.Location = new System.Drawing.Point(308, 184);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(100, 44);
+            this.btneliminar.Size = new System.Drawing.Size(82, 44);
             this.btneliminar.TabIndex = 31;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
@@ -56,20 +59,20 @@
             // btnmenu
             // 
             this.btnmenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnmenu.Location = new System.Drawing.Point(153, 269);
+            this.btnmenu.Location = new System.Drawing.Point(443, 183);
             this.btnmenu.Name = "btnmenu";
-            this.btnmenu.Size = new System.Drawing.Size(100, 38);
+            this.btnmenu.Size = new System.Drawing.Size(91, 45);
             this.btnmenu.TabIndex = 30;
-            this.btnmenu.Text = "Menú";
+            this.btnmenu.Text = "Atrás";
             this.btnmenu.UseVisualStyleBackColor = true;
             this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
             // 
             // btnmodificar
             // 
             this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnmodificar.Location = new System.Drawing.Point(153, 140);
+            this.btnmodificar.Location = new System.Drawing.Point(207, 183);
             this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(100, 44);
+            this.btnmodificar.Size = new System.Drawing.Size(82, 44);
             this.btnmodificar.TabIndex = 29;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
@@ -79,9 +82,9 @@
             // 
             this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnagregar.Location = new System.Drawing.Point(25, 140);
+            this.btnagregar.Location = new System.Drawing.Point(108, 184);
             this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(100, 44);
+            this.btnagregar.Size = new System.Drawing.Size(82, 44);
             this.btnagregar.TabIndex = 28;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
@@ -92,21 +95,21 @@
             this.cboestado.FormattingEnabled = true;
             this.cboestado.Location = new System.Drawing.Point(142, 78);
             this.cboestado.Name = "cboestado";
-            this.cboestado.Size = new System.Drawing.Size(150, 21);
+            this.cboestado.Size = new System.Drawing.Size(140, 21);
             this.cboestado.TabIndex = 24;
             // 
             // txtcontraseña
             // 
             this.txtcontraseña.Location = new System.Drawing.Point(142, 52);
             this.txtcontraseña.Name = "txtcontraseña";
-            this.txtcontraseña.Size = new System.Drawing.Size(150, 20);
+            this.txtcontraseña.Size = new System.Drawing.Size(193, 20);
             this.txtcontraseña.TabIndex = 23;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(142, 24);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(150, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(193, 20);
             this.txtUsuario.TabIndex = 22;
             // 
             // label3
@@ -147,27 +150,42 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtcontraseña);
             this.groupBox1.Controls.Add(this.cboestado);
-            this.groupBox1.Location = new System.Drawing.Point(25, 12);
+            this.groupBox1.Location = new System.Drawing.Point(108, 52);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(358, 122);
+            this.groupBox1.Size = new System.Drawing.Size(426, 122);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(30, 52);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 70);
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmManUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 314);
+            this.ClientSize = new System.Drawing.Size(584, 314);
+            this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnmenu);
             this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.btnagregar);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmManUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmManUsuarios";
+            this.Text = "Mantenimientos Usuarios";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +202,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

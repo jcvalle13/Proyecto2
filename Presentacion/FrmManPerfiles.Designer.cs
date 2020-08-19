@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManPerfiles));
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPerfiles = new System.Windows.Forms.DataGridView();
@@ -42,13 +43,15 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(580, 30);
+            this.txtBuscar.Location = new System.Drawing.Point(724, 56);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(163, 20);
             this.txtBuscar.TabIndex = 21;
@@ -57,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(472, 33);
+            this.label1.Location = new System.Drawing.Point(616, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 24;
@@ -70,7 +73,7 @@
             this.dgvPerfiles.AllowUserToOrderColumns = true;
             this.dgvPerfiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPerfiles.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dgvPerfiles.Location = new System.Drawing.Point(413, 56);
+            this.dgvPerfiles.Location = new System.Drawing.Point(498, 82);
             this.dgvPerfiles.Name = "dgvPerfiles";
             this.dgvPerfiles.ReadOnly = true;
             this.dgvPerfiles.RowHeadersVisible = false;
@@ -86,7 +89,7 @@
             this.groupBox1.Controls.Add(this.cboPerfiles);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtDescripcion);
-            this.groupBox1.Location = new System.Drawing.Point(12, 56);
+            this.groupBox1.Location = new System.Drawing.Point(92, 82);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(378, 130);
             this.groupBox1.TabIndex = 22;
@@ -146,9 +149,10 @@
             // 
             // btnatras
             // 
-            this.btnatras.Location = new System.Drawing.Point(21, 284);
+            this.btnatras.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnatras.Location = new System.Drawing.Point(813, 308);
             this.btnatras.Name = "btnatras";
-            this.btnatras.Size = new System.Drawing.Size(53, 36);
+            this.btnatras.Size = new System.Drawing.Size(74, 40);
             this.btnatras.TabIndex = 8;
             this.btnatras.Text = "Atrás";
             this.btnatras.UseVisualStyleBackColor = true;
@@ -159,7 +163,7 @@
             this.btnEliminar.BackColor = System.Drawing.SystemColors.Control;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(681, 285);
+            this.btnEliminar.Location = new System.Drawing.Point(700, 307);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(93, 40);
             this.btnEliminar.TabIndex = 6;
@@ -173,7 +177,7 @@
             this.btnModificar.BackColor = System.Drawing.SystemColors.Control;
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(580, 285);
+            this.btnModificar.Location = new System.Drawing.Point(599, 308);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(95, 39);
             this.btnModificar.TabIndex = 5;
@@ -187,7 +191,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(475, 286);
+            this.button1.Location = new System.Drawing.Point(498, 308);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 39);
             this.button1.TabIndex = 25;
@@ -196,11 +200,22 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 88);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 70);
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmManPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 352);
+            this.ClientSize = new System.Drawing.Size(900, 373);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnatras);
             this.Controls.Add(this.txtBuscar);
@@ -209,12 +224,15 @@
             this.Controls.Add(this.dgvPerfiles);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnModificar);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmManPerfiles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmManPerfiles";
+            this.Text = "Mantenimiento Perfiles";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +254,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

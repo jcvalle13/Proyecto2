@@ -48,7 +48,8 @@
             this.consultasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1239, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -57,42 +58,46 @@
             this.sistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LogoffToolStripMenuItem,
             this.regresarAlInicioToolStripMenuItem});
+            this.sistemaToolStripMenuItem.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
-            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.sistemaToolStripMenuItem.Text = "Sistema";
             // 
             // LogoffToolStripMenuItem
             // 
             this.LogoffToolStripMenuItem.Name = "LogoffToolStripMenuItem";
-            this.LogoffToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.LogoffToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.LogoffToolStripMenuItem.Text = "Log off";
+            this.LogoffToolStripMenuItem.Click += new System.EventHandler(this.LogoffToolStripMenuItem_Click_1);
             // 
             // regresarAlInicioToolStripMenuItem
             // 
             this.regresarAlInicioToolStripMenuItem.Name = "regresarAlInicioToolStripMenuItem";
-            this.regresarAlInicioToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.regresarAlInicioToolStripMenuItem.Text = "Regresar al Inicio";
+            this.regresarAlInicioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.regresarAlInicioToolStripMenuItem.Text = "Cambiar de usuario";
+            this.regresarAlInicioToolStripMenuItem.Click += new System.EventHandler(this.regresarAlInicioToolStripMenuItem_Click);
             // 
             // mantenimientosToolStripMenuItem
             // 
             this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
             this.perfilesToolStripMenuItem});
+            this.mantenimientosToolStripMenuItem.Font = new System.Drawing.Font("Bookman Old Style", 9F);
             this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
-            this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
             this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click_1);
             // 
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.perfilesToolStripMenuItem.Text = "Perfiles";
             this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.perfilesToolStripMenuItem_Click_1);
             // 
@@ -100,8 +105,9 @@
             // 
             this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listadoDeClientesToolStripMenuItem});
+            this.consultasToolStripMenuItem.Font = new System.Drawing.Font("Bookman Old Style", 9F);
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
             // listadoDeClientesToolStripMenuItem
@@ -113,14 +119,17 @@
             // 
             // FrmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1239, 634);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Bookman Old Style", 9F);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMenu";
+            this.Text = "SISTEMA BANCARIO";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

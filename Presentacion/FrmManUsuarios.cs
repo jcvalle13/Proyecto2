@@ -139,9 +139,11 @@ namespace Presentacion
 
         private void btnmenu_Click(object sender, EventArgs e)
         {
-            FrmMenu frm = new FrmMenu();
+            this.Close();
+
+            /*FrmMenu frm = new FrmMenu();
             frm.Show();
-            this.Hide();
+            this.Hide();*/
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
