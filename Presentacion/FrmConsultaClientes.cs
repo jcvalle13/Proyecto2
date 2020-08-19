@@ -30,9 +30,10 @@ namespace Presentacion
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            FrmMenu frm = new FrmMenu();
+            this.Close();
+            /*FrmMenu frm = new FrmMenu();
             frm.Show();
-            this.Hide();
+            this.Hide();*/
         }
     }
 }
