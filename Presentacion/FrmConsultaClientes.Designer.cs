@@ -36,6 +36,7 @@
             // 
             // btnmostrar
             // 
+            this.btnmostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnmostrar.Location = new System.Drawing.Point(12, 266);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Size = new System.Drawing.Size(93, 47);
@@ -54,6 +55,7 @@
             // 
             // btnatras
             // 
+            this.btnatras.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnatras.Location = new System.Drawing.Point(461, 266);
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(93, 47);
@@ -71,6 +73,7 @@
             this.Controls.Add(this.dgvclientes);
             this.Controls.Add(this.btnatras);
             this.Name = "FrmConsultaClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmConsultaClientes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvclientes)).EndInit();
             this.ResumeLayout(false);

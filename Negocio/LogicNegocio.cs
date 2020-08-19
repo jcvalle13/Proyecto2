@@ -17,7 +17,7 @@ namespace Negocio
             {
                 SQLParametros objpeticion = new SQLParametros();
 
-                objpeticion.Peticion = @"INSERT INTO Usuarioss VALUES ('" + P_Usuario.Usuario + "','" + P_Usuario.Contraseña + "','" + P_Usuario.Estado + "')";
+                objpeticion.Peticion = @"INSERT INTO Usuarios VALUES ('" + P_Usuario.Usuario + "','" + P_Usuario.Contraseña + "','" + P_Usuario.Estado + "')";
 
                 Acceso objacceso = new Acceso();
                 return objacceso.Ejecutar_Peticiones(objpeticion);
@@ -51,7 +51,7 @@ namespace Negocio
             try
             {
                 SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"SELECT Usuario, Contraseña, Estado FROM Usuarioss";
+                objpeticion.Peticion = @"SELECT Usuario, Contraseña, Estado FROM Usuarios";
 
                 Acceso objacceso = new Acceso();
                 return objacceso.Consultar_Usuarios(objpeticion);
@@ -101,20 +101,6 @@ namespace Negocio
             {
                 throw ex;
             }
-
-
-            /*try
-            {
-                SQLParametros objpeticion = new SQLParametros();
-               objpeticion.Peticion = @"SELECT Usuario, Contraseña, Estado FROM Usuarioss";
-
-                Acceso objacceso = new Acceso();
-                return objacceso.Consultar_Permisos_Usuarios(objpeticion);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }*/
         }
 
 
@@ -157,41 +143,6 @@ namespace Negocio
             }
 
 
-            //SE UTILIZA CON PARAMETROS
-            /* SQLParametros objpeticion = new SQLParametros();
-
-
-             //Ajustar peticion para utilización con parametros
-             objpeticion.Peticion = @"EXEC PA_AgregarPerfil @codigoperfil, @descripcion, @estado";
-
-             //Crear los parametros
-             SqlParameter parametroCodigo = new SqlParameter();
-             parametroCodigo.ParameterName = "@codigoperfil";
-             parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
-             parametroCodigo.Value = P_Perfil.cod_perfil;
-
-             SqlParameter parametroDescripcion = new SqlParameter();
-             parametroDescripcion.ParameterName = "@descripcion";
-             parametroDescripcion.Size = 50;
-             parametroDescripcion.SqlDbType = System.Data.SqlDbType.VarChar;
-             parametroDescripcion.Value = P_Perfil.descripcion;
-
-             SqlParameter parametroEstado = new SqlParameter();
-             parametroEstado.ParameterName = "@estado";
-             parametroEstado.SqlDbType = System.Data.SqlDbType.Bit;
-             parametroEstado.Value = P_Perfil.estado;
-
-             //Agrega a la lista de parametros los parametros creados
-             objpeticion.LstParametros.Add(parametroCodigo);
-             objpeticion.LstParametros.Add(parametroDescripcion);
-             objpeticion.LstParametros.Add(parametroEstado);
-
-             Acceso objacceso = new Acceso();
-             return objacceso.Ejecutar_Peticiones(objpeticion);*/
-
-
-
-
         }
 
         public static int ModificarPerfil(Perfiles P_Perfil)
@@ -209,42 +160,6 @@ namespace Negocio
                 throw ex;
             }
 
-
-
-
-            /* try
-            {
-                SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"EXEC PA_ModificarPerfil @codigoperfil, @descripcion, @estado";
-
-                //Crear los parametros
-                SqlParameter parametroCodigo = new SqlParameter();
-                parametroCodigo.ParameterName = "@codigoperfil";
-                parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
-                parametroCodigo.Value = P_Perfil.cod_perfil;
-
-                SqlParameter parametroDescripcion = new SqlParameter();
-                parametroDescripcion.ParameterName = "@descripcion";
-                parametroDescripcion.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroDescripcion.Value = P_Perfil.descripcion;
-
-                SqlParameter parametroEstado = new SqlParameter();
-                parametroEstado.ParameterName = "@estado";
-                parametroEstado.SqlDbType = System.Data.SqlDbType.Bit;
-                parametroEstado.Value = P_Perfil.estado;
-
-                //Agrega a la lista de parametros los parametros creados
-                objpeticion.LstParametros.Add(parametroCodigo);
-                objpeticion.LstParametros.Add(parametroDescripcion);
-                objpeticion.LstParametros.Add(parametroEstado);
-
-                Acceso objacceso = new Acceso();
-                return objacceso.Ejecutar_Peticiones(objpeticion);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }*/
         }
 
         public static int EliminarPerfil(Perfiles P_Perfil)
@@ -263,28 +178,6 @@ namespace Negocio
                 throw ex;
             }
 
-
-            /* try
-            {
-                SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"EXEC PA_EliminarPerfil @codigoperfil";
-
-                //Crear los parametros
-                SqlParameter parametroCodigo = new SqlParameter();
-                parametroCodigo.ParameterName = "@codigoperfil";
-                parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
-                parametroCodigo.Value = P_Perfil.cod_perfil;
-
-                //Agrega a la lista de parametros los parametros creados
-                objpeticion.LstParametros.Add(parametroCodigo);
-
-                Acceso objacceso = new Acceso();
-                return objacceso.Ejecutar_Peticiones(objpeticion);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }*/
         }
 
         public static List<Perfiles> ConsultarPerfiles(Perfiles P_Perfil)
@@ -328,7 +221,7 @@ namespace Negocio
             try
             {
                 SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"SELECT Nombrecliente,ID , Email, Telefono, Producto, FROM DataClientes";
+                objpeticion.Peticion = @"SELECT Nombrecliente, ID, Email, Telefono, Producto FROM DataClientes";
 
                 Acceso objacceso = new Acceso();
 

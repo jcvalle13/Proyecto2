@@ -61,7 +61,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Codigo a buscar:";
+            this.label1.Text = "Código a buscar:";
             // 
             // dgvPerfiles
             // 
@@ -210,6 +210,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnModificar);
             this.Name = "FrmManPerfiles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmManPerfiles";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).EndInit();
             this.groupBox1.ResumeLayout(false);

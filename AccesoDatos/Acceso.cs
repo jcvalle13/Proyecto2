@@ -271,11 +271,12 @@ namespace AccesoDatos
 
                         //Aqui se obtiene los valores de celda o columna por fila leida
                         
-                        p.Nombre = fila.ItemArray[1].ToString();
-                        p.Identificacion = Convert.ToInt32(fila.ItemArray[0].ToString());
-                        p.email = fila.ItemArray[0].ToString();
-                        p.Producto = fila.ItemArray[2].ToString();
-                        p.Telefono = Convert.ToInt32(fila.ItemArray[4].ToString());
+                        p.Nombre = fila.ItemArray[0].ToString();
+                        p.Identificacion = Convert.ToInt32(fila.ItemArray[1].ToString());
+                        p.email = fila.ItemArray[2].ToString();
+                        p.Telefono = Convert.ToInt32(fila.ItemArray[3].ToString());
+                        p.Producto = fila.ItemArray[4].ToString();
+                        
                         
                         lstresultados.Add(p);
                     }

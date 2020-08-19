@@ -44,7 +44,7 @@
             // 
             // btneliminar
             // 
-            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.btneliminar.Location = new System.Drawing.Point(283, 140);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(100, 44);
@@ -55,10 +55,10 @@
             // 
             // btnmenu
             // 
-            this.btnmenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmenu.Location = new System.Drawing.Point(153, 263);
+            this.btnmenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnmenu.Location = new System.Drawing.Point(153, 269);
             this.btnmenu.Name = "btnmenu";
-            this.btnmenu.Size = new System.Drawing.Size(100, 44);
+            this.btnmenu.Size = new System.Drawing.Size(100, 38);
             this.btnmenu.TabIndex = 30;
             this.btnmenu.Text = "Menú";
             this.btnmenu.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@
             // 
             // btnmodificar
             // 
-            this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnmodificar.Location = new System.Drawing.Point(153, 140);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(100, 44);
@@ -77,7 +77,8 @@
             // 
             // btnagregar
             // 
-            this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnagregar.Location = new System.Drawing.Point(25, 140);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(100, 44);
@@ -163,6 +164,7 @@
             this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.btnagregar);
             this.Name = "FrmManUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmManUsuarios";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
