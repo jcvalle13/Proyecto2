@@ -22,6 +22,7 @@ namespace Presentacion
 
             mantenimientosToolStripMenuItem.Visible = false;
             consultasToolStripMenuItem.Visible = false;
+            
 
 
 
@@ -50,8 +51,7 @@ namespace Presentacion
             Application.Exit();
 
         }
-
-        private void perfilesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void perfilesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FrmManPerfiles frm = new FrmManPerfiles();
             //frm.MdiParent = this;
@@ -59,14 +59,20 @@ namespace Presentacion
             this.Hide();
         }
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void usuariosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FrmManUsuarios frm = new FrmManUsuarios();
             frm.Show();
             this.Hide();
         }
 
-      
+
+        private void listadoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaClientes frm = new FrmConsultaClientes();
+            frm.Show();
+            this.Hide();
+        }
 
 
     }

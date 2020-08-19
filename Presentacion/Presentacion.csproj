@@ -53,6 +53,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaClientes.Designer.cs">
+      <DependentUpon>FrmConsultaClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmConsultaClientes.resx">
+      <DependentUpon>FrmConsultaClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +134,7 @@
     <None Include="Connected Services\WCFServicio\Servicios2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\Entidades.ClientesPrestamos.datasource" />
     <None Include="Properties\DataSources\Entidades.Perfiles.datasource" />
     <None Include="Properties\DataSources\Entidades.Usuarios.datasource" />
   </ItemGroup>

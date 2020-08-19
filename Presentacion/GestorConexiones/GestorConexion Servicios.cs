@@ -23,7 +23,7 @@ namespace Presentacion.GestorConexiones
             {
                 if (objservicio != null)
                     objservicio.Close();
-            
+
             }
         }
 
@@ -47,7 +47,7 @@ namespace Presentacion.GestorConexiones
             }
         }
 
-        public static  List<Usuarios> Consultar_Usuarios()
+        public static List<Usuarios> Consultar_Usuarios()
         {
             WCFServicio.ServiciosClient objservicio = null;
             try
@@ -212,7 +212,26 @@ namespace Presentacion.GestorConexiones
 
         #endregion
 
+        #region ConsultaPrestamocliente
+        public static List<ClientesPrestamos> Consultar_Clientes_Prestamos()
+        {
+            WCFServicio.ServiciosClient objservicio = null;
+            try
+            {
+                objservicio = new WCFServicio.ServiciosClient();
+                return objservicio.Consultar_Clientes_Prestamos();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (objservicio != null)
+                    objservicio.Close();
+            }
+            #endregion
+        }
     }
 }
-
 

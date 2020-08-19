@@ -28,13 +28,12 @@ namespace Negocio
             }
         }
 
-
         public static int ModificarUsuario(Usuarios P_Usuario)
         {
             try
             {
                 SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"UPDATE Usuarioss SET Contraseña = '" + P_Usuario.Contraseña + "', Estado = '" + P_Usuario.Estado + "' WHERE Usuario = '" + P_Usuario.Usuario + "'";
+                objpeticion.Peticion = @"UPDATE Usuarios SET Contraseña = '" + P_Usuario.Contraseña + "', Estado = '" + P_Usuario.Estado + "' WHERE Usuario = '" + P_Usuario.Usuario + "'";
 
                 Acceso objacceso = new Acceso();
                 return objacceso.Ejecutar_Peticiones(objpeticion);
@@ -69,7 +68,7 @@ namespace Negocio
             try
             {
                 SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"SELECT Usuario, Contraseña, Estado FROM Usuarioss ";
+                objpeticion.Peticion = @"SELECT Usuario, Contraseña, Estado FROM Usuarios ";
                 objpeticion.Peticion += @"WHERE Usuario = '" + P_usuario.Usuario + "' AND ";
                 objpeticion.Peticion += @"Contraseña = '" + P_usuario.Contraseña + "' AND ";
                 objpeticion.Peticion += @"Estado = '" + P_usuario.Estado + "'";
@@ -126,7 +125,7 @@ namespace Negocio
             {
                 SQLParametros objpeticion = new SQLParametros();
 
-                objpeticion.Peticion = @"DELETE FROM Usuarioss WHERE Usuario = '" + P_usuario.Usuario + "'";
+                objpeticion.Peticion = @"DELETE FROM Usuarios WHERE Usuario = '" + P_usuario.Usuario + "'";
 
                 Acceso objacceso = new Acceso();
                 return objacceso.Ejecutar_Peticiones(objpeticion);
@@ -319,6 +318,29 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        #endregion
+
+        #region Clientes
+
+        public static List<ClientesPrestamos> Consultar_Clientes_Prestamos()
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"SELECT Nombrecliente,ID , Email, Telefono, Producto, FROM DataClientes";
+
+                Acceso objacceso = new Acceso();
+
+                return objacceso.Consultar_Clientes_Prestamos(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
 
         #endregion
 

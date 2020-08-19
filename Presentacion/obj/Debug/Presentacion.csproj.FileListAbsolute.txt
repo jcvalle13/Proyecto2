@@ -14,3 +14,4 @@ C:\Users\jcval\source\repos\Proyecto2\Presentacion\obj\Debug\Presentacion.csproj
 C:\Users\jcval\source\repos\Proyecto2\Presentacion\bin\Debug\Presentacion.exe.config
 C:\Users\jcval\source\repos\Proyecto2\Presentacion\bin\Debug\Presentacion.exe
 C:\Users\jcval\source\repos\Proyecto2\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\jcval\source\repos\Proyecto2\Presentacion\obj\Debug\Presentacion.FrmConsultaClientes.resources

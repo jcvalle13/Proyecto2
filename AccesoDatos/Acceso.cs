@@ -241,7 +241,57 @@ namespace AccesoDatos
         }
         #endregion
 
+        public List<ClientesPrestamos> Consultar_Clientes_Prestamos(SQLParametros P_Peticion)
+        {
+            List<ClientesPrestamos> lstresultados = new List<ClientesPrestamos>();
 
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = objconexion; //Identifica la conexion a la BD
+                cmd.CommandType = System.Data.CommandType.Text; //Se especifica el tipo de formato de sentencia a ejecutar
+                cmd.CommandText = P_Peticion.Peticion; //Aqui se asigna la peticion construida
+
+                if (P_Peticion.LstParametros.Count > 0)  //Validar si tiene parametros, y agregarlos
+                    cmd.Parameters.AddRange(P_Peticion.LstParametros.ToArray());
+
+
+                SqlDataAdapter objconsultacliente = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                objconsultacliente.Fill(dt);
+
+                if (dt.Rows.Count > 0) //Verifica si la consulta devolvio registros
+                {
+                    foreach (DataRow fila in dt.Rows)
+                    {
+                        ClientesPrestamos p = new ClientesPrestamos();
+
+                        //Aqui se obtiene los valores de celda o columna por fila leida
+                        
+                        p.Nombre = fila.ItemArray[1].ToString();
+                        p.Identificacion = Convert.ToInt32(fila.ItemArray[0].ToString());
+                        p.email = fila.ItemArray[0].ToString();
+                        p.Producto = fila.ItemArray[2].ToString();
+                        p.Telefono = Convert.ToInt32(fila.ItemArray[4].ToString());
+                        
+                        lstresultados.Add(p);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CERRARCONEXION();
+            }
+
+            return lstresultados;
+        }
 
     }
 }

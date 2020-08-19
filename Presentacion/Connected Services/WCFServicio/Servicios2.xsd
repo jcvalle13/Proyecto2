@@ -29,4 +29,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfPerfiles" nillable="true" type="tns:ArrayOfPerfiles" />
+  <xs:complexType name="ArrayOfClientesPrestamos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClientesPrestamos" nillable="true" type="tns:ClientesPrestamos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClientesPrestamos" nillable="true" type="tns:ArrayOfClientesPrestamos" />
+  <xs:complexType name="ClientesPrestamos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Identificacion" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Producto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono" type="xs:int" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientesPrestamos" nillable="true" type="tns:ClientesPrestamos" />
 </xs:schema>

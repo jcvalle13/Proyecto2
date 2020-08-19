@@ -67,6 +67,12 @@
   <wsdl:message name="IServicios_ConsultarPerfiles_OutputMessage">
     <wsdl:part name="parameters" element="tns:ConsultarPerfilesResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicios_Consultar_Clientes_Prestamos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Consultar_Clientes_Prestamos" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_Consultar_Clientes_Prestamos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Consultar_Clientes_PrestamosResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServicios">
     <wsdl:operation name="AgregarUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicios/AgregarUsuario" message="tns:IServicios_AgregarUsuario_InputMessage" />
@@ -107,6 +113,10 @@
     <wsdl:operation name="ConsultarPerfiles">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicios/ConsultarPerfiles" message="tns:IServicios_ConsultarPerfiles_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ConsultarPerfilesResponse" message="tns:IServicios_ConsultarPerfiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Clientes_Prestamos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/Consultar_Clientes_Prestamos" message="tns:IServicios_Consultar_Clientes_Prestamos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/Consultar_Clientes_PrestamosResponse" message="tns:IServicios_Consultar_Clientes_Prestamos_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServicios" type="tns:IServicios">
@@ -194,6 +204,15 @@
     </wsdl:operation>
     <wsdl:operation name="ConsultarPerfiles">
       <soap:operation soapAction="http://tempuri.org/IServicios/ConsultarPerfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Clientes_Prestamos">
+      <soap:operation soapAction="http://tempuri.org/IServicios/Consultar_Clientes_Prestamos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -47,5 +47,10 @@ namespace Servicios
         List<Perfiles> ConsultarPerfiles(Perfiles P_Perfil);
         #endregion
 
+        #region Consultaclientes
+        [OperationContract]
+        List<ClientesPrestamos> Consultar_Clientes_Prestamos();
+        #endregion
+
     }
 }

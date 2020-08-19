@@ -65,5 +65,13 @@ namespace Servicios
         {
             return LogicNegocio.VerificarUsuario(P_usuario);
         }
+
+        public List<ClientesPrestamos> Consultar_Clientes_Prestamos()
+        {
+            return LogicNegocio.Consultar_Clientes_Prestamos();
+        }
+
+
+
     }
 }
