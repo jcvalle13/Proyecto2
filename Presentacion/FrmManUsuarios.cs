@@ -14,11 +14,29 @@ namespace Presentacion
         public bool EsError { get; set; }
         #endregion
 
+        private void CargarPerfiles()
+        {
+            try
+            {
+                List<Perfiles> lstperfiles = GestorConexiones.GestorConexion_Servicios.ConsultarPerfiles(new Perfiles { cod_perfil = 0 });
+
+                cboPerfiles.DataSource = lstperfiles;
+                cboPerfiles.DisplayMember = "descripcion";
+                cboPerfiles.ValueMember = "cod_perfil";
+                cboPerfiles.Refresh();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public FrmManUsuarios()
         {
             InitializeComponent();
             lstresultado = new List<Usuarios>();
             CargarCombos();
+            CargarPerfiles();
         }
 
         private void limpiar()
@@ -159,6 +177,34 @@ namespace Presentacion
                 limpiar();
 
                 txtUsuario.Focus();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnListaUsuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               
+                DataTable dt = new DataTable();
+
+                dt.Columns.Add("NombreUsuario");
+                dt.Columns.Add("Contraseña");
+                dt.Columns.Add("Estado");
+
+                List<Usuarios> lstusuarios = GestorConexiones.GestorConexion_Servicios.Consultar_Usuarios();
+
+                foreach (Usuarios item in lstusuarios)
+                {
+                    dt.Rows.Add(item.Usuario, item.Contraseña, item.Estado == true ? "Activo" : "Inactivo");
+                }
+
+                gdvUsuarios.DataSource = dt;
+                gdvUsuarios.Refresh();
             }
             catch (Exception ex)
             {

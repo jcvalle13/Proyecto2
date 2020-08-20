@@ -7,6 +7,27 @@ namespace Presentacion.GestorConexiones
     public static class GestorConexion_Servicios
     {
         #region Usuarios
+
+        public static int AgregarUsuarioTransaccion(Usuarios P_Usuarios)
+        {
+            WCFServicio.ServiciosClient objservicio = null;
+
+            try
+            {
+                objservicio = new WCFServicio.ServiciosClient();
+                return objservicio.AgregarUsuarioTransaccion(P_Usuarios);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (objservicio != null)
+                    objservicio.Close();
+            }
+        }
+
         public static int AgregarUsuario(Usuarios P_Usuario)
         {
             WCFServicio.ServiciosClient objservicio = null;

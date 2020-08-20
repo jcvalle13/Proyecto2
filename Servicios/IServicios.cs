@@ -15,6 +15,9 @@ namespace Servicios
         int AgregarUsuario(Usuarios P_Usuario);
 
         [OperationContract]
+        int AgregarUsuarioTransaccion(Usuarios P_Usuarios);
+
+        [OperationContract]
         int ModificarUsuario(Usuarios P_Usuario);
 
         [OperationContract]

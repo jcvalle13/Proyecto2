@@ -64,7 +64,7 @@ namespace Presentacion
             FrmConsultaClientes frm = new FrmConsultaClientes();
             frm.MdiParent = this;
             frm.Show();
-            this.Hide();
+            //this.Hide();
         }
 
         private void LogoffToolStripMenuItem_Click_1(object sender, EventArgs e)

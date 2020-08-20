@@ -13,6 +13,12 @@
   <wsdl:message name="IServicios_AgregarUsuario_OutputMessage">
     <wsdl:part name="parameters" element="tns:AgregarUsuarioResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicios_AgregarUsuarioTransaccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarUsuarioTransaccion" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_AgregarUsuarioTransaccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarUsuarioTransaccionResponse" />
+  </wsdl:message>
   <wsdl:message name="IServicios_ModificarUsuario_InputMessage">
     <wsdl:part name="parameters" element="tns:ModificarUsuario" />
   </wsdl:message>
@@ -78,6 +84,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IServicios/AgregarUsuario" message="tns:IServicios_AgregarUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicios/AgregarUsuarioResponse" message="tns:IServicios_AgregarUsuario_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="AgregarUsuarioTransaccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/AgregarUsuarioTransaccion" message="tns:IServicios_AgregarUsuarioTransaccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/AgregarUsuarioTransaccionResponse" message="tns:IServicios_AgregarUsuarioTransaccion_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="ModificarUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicios/ModificarUsuario" message="tns:IServicios_ModificarUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicios/ModificarUsuarioResponse" message="tns:IServicios_ModificarUsuario_OutputMessage" />
@@ -123,6 +133,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="AgregarUsuario">
       <soap:operation soapAction="http://tempuri.org/IServicios/AgregarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarUsuarioTransaccion">
+      <soap:operation soapAction="http://tempuri.org/IServicios/AgregarUsuarioTransaccion" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

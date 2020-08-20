@@ -294,5 +294,65 @@ namespace AccesoDatos
             return lstresultados;
         }
 
+        #region Para transaccion
+        public void AgregarPeticionEnListado(SQLParametros P_Peticion, ref List<SqlCommand> P_Lista)
+        {
+            /// Método que se encarga de agregar a la lista de peticiones por ejecutar la nueva petición 
+            /// recibida
+
+
+            //utilizo parametro por valor
+            //Este objeto se encarga de las configuraciones necesarias para conectarse a BD
+            //Ademas de contener un metodo para la ejecucion de esa petición contra la BD
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = objconexion; //Identifica la conexion a la BD
+            cmd.CommandType = System.Data.CommandType.Text; //Se especifica el tipo de formato de sentencia a ejecutar
+            cmd.CommandText = P_Peticion.Peticion; //Aqui se asigna la peticion construida
+
+            if (P_Peticion.LstParametros.Count > 0)  //Validar si tiene parametros, y agregarlos
+                cmd.Parameters.AddRange(P_Peticion.LstParametros.ToArray());
+
+            P_Lista.Add(cmd); //Aqui se agrega nuevo item a la lista de comandos por ejecutar en la transaccion
+        }
+
+
+        public int EjecutarTransaccion(List<SqlCommand> P_Lista)
+        {
+            /// Método que se encarga de la ejecución de las peticiones una a una, es decir, realiza 
+            /// la ejecución de la trasaccion
+
+
+            SqlTransaction objtransaccion;
+            ABRIRCONEXION();
+            objtransaccion = objconexion.BeginTransaction();
+
+            try
+            {
+                //Recorre la lista de peticiones y ejecuta en memoria la peticion uno a uno
+                //En este momento todo esta en una simulación
+                foreach (SqlCommand cmd in P_Lista)
+                {
+                    cmd.Transaction = objtransaccion;
+                    cmd.Connection = objconexion;
+                    cmd.ExecuteNonQuery(); //Aqui es donde verifica si es correcta la ejecucion de la peticion
+                }
+                objtransaccion.Commit(); //Este realiza los cambios de forma permanente en BD
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                objtransaccion.Rollback(); //En caso de error elimina cualquier cambio efectuado
+                throw ex;
+            }
+            finally
+            {
+                objtransaccion.Dispose();
+                CERRARCONEXION();
+            }
+
+        }
+
+        #endregion
     }
 }

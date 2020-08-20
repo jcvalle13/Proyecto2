@@ -28,6 +28,95 @@ namespace Negocio
             }
         }
 
+        public static int AgregarUsuarioTransaccion(Usuarios P_Usuarios)
+        {
+            try
+            {
+                //Lista que conservara las peticiones a ejecutar de forma másiva
+                List<SqlCommand> lstSentencias = new List<SqlCommand>();
+
+                //Aqui se genera cada peticion y se manda agregar a la lista de peticiones
+
+                //AGREGAR USUARIO
+                //*****************************************************************************
+
+                //Ajustar peticion para utilización con parametros
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"EXEC PA_InsertarUsuario @usuario, @clave, @estado";
+
+                //Crear los parametros
+                SqlParameter parametroUsuario = new SqlParameter();
+                parametroUsuario.ParameterName = "@usuario";
+                parametroUsuario.SqlDbType = System.Data.SqlDbType.VarChar;
+                parametroUsuario.Size = 15;
+                parametroUsuario.Value = P_Usuarios.Usuario;
+
+                SqlParameter parametroClave = new SqlParameter();
+                parametroClave.ParameterName = "@clave";
+                parametroClave.Size = 10;
+                parametroClave.SqlDbType = System.Data.SqlDbType.VarChar;
+                parametroClave.Value = P_Usuarios.Contraseña;
+
+                SqlParameter parametroEstado = new SqlParameter();
+                parametroEstado.ParameterName = "@estado";
+                parametroEstado.SqlDbType = System.Data.SqlDbType.Bit;
+                parametroEstado.Value = P_Usuarios.Estado;
+
+                //Agrega a la lista de parametros los parametros creados
+                objpeticion.LstParametros.Add(parametroUsuario);
+                objpeticion.LstParametros.Add(parametroClave);
+                objpeticion.LstParametros.Add(parametroEstado);
+
+                //Aqui es donde se llama al método para agregar en la lista creada la peticion
+                //que se armo anteriormente.
+                Acceso objacceso = new Acceso();
+                objacceso.AgregarPeticionEnListado(objpeticion, ref lstSentencias);
+
+                //*****************************************************************************
+
+                //AGREGAR USUARIO POR PERFIL
+                //*****************************************************************************
+
+                //Ajustar peticion para utilización con parametros
+                objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"EXEC PA_InsertarUsuarioxPerfil @usuario, @perfil";
+
+                //Crear los parametros
+                parametroUsuario = new SqlParameter();
+                parametroUsuario.ParameterName = "@usuario";
+                parametroUsuario.SqlDbType = System.Data.SqlDbType.VarChar;
+                parametroUsuario.Size = 15;
+                parametroUsuario.Value = P_Usuarios.Usuario;
+
+                SqlParameter parametroPerfil = new SqlParameter();
+                parametroPerfil.ParameterName = "@perfil";
+                parametroPerfil.SqlDbType = System.Data.SqlDbType.Int;
+                parametroPerfil.Value = P_Usuarios.Perfiles.cod_perfil;
+
+                //Agrega a la lista de parametros los parametros creados
+                objpeticion.LstParametros.Add(parametroUsuario);
+                objpeticion.LstParametros.Add(parametroPerfil);
+
+                //Aqui es donde se llama al método para agregar en la lista creada la peticion
+                //que se armo anteriormente.
+                objacceso = new Acceso();
+                objacceso.AgregarPeticionEnListado(objpeticion, ref lstSentencias);
+
+                //*****************************************************************************
+
+                //Ejecucion de la trasaccion
+                return objacceso.EjecutarTransaccion(lstSentencias);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+
         public static int ModificarUsuario(Usuarios P_Usuario)
         {
             try
@@ -44,8 +133,6 @@ namespace Negocio
             }
         }
 
-
-
         public static List<Usuarios> Consultar_Usuarios()
         {
             try
@@ -61,7 +148,6 @@ namespace Negocio
                 throw ex;
             }
         }
-
 
         public static bool VerificarUsuario(Usuarios P_usuario)
         {
@@ -102,7 +188,6 @@ namespace Negocio
                 throw ex;
             }
         }
-
 
         public static int EliminarUsuario(Usuarios P_usuario)
         {

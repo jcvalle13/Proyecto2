@@ -21,6 +21,12 @@ namespace Presentacion.WCFServicio {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/AgregarUsuario", ReplyAction="http://tempuri.org/IServicios/AgregarUsuarioResponse")]
         System.Threading.Tasks.Task<int> AgregarUsuarioAsync(Entidades.Usuarios P_Usuario);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/AgregarUsuarioTransaccion", ReplyAction="http://tempuri.org/IServicios/AgregarUsuarioTransaccionResponse")]
+        int AgregarUsuarioTransaccion(Entidades.Usuarios P_Usuarios);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/AgregarUsuarioTransaccion", ReplyAction="http://tempuri.org/IServicios/AgregarUsuarioTransaccionResponse")]
+        System.Threading.Tasks.Task<int> AgregarUsuarioTransaccionAsync(Entidades.Usuarios P_Usuarios);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/ModificarUsuario", ReplyAction="http://tempuri.org/IServicios/ModificarUsuarioResponse")]
         int ModificarUsuario(Entidades.Usuarios P_Usuario);
         
@@ -115,6 +121,14 @@ namespace Presentacion.WCFServicio {
         
         public System.Threading.Tasks.Task<int> AgregarUsuarioAsync(Entidades.Usuarios P_Usuario) {
             return base.Channel.AgregarUsuarioAsync(P_Usuario);
+        }
+        
+        public int AgregarUsuarioTransaccion(Entidades.Usuarios P_Usuarios) {
+            return base.Channel.AgregarUsuarioTransaccion(P_Usuarios);
+        }
+        
+        public System.Threading.Tasks.Task<int> AgregarUsuarioTransaccionAsync(Entidades.Usuarios P_Usuarios) {
+            return base.Channel.AgregarUsuarioTransaccionAsync(P_Usuarios);
         }
         
         public int ModificarUsuario(Entidades.Usuarios P_Usuario) {

@@ -21,7 +21,7 @@ namespace Presentacion
         {
             lstresultado = new List<Perfiles>();
             InitializeComponent();
-            CargarLista();
+            //CargarLista();
             CargarCombos();
 
         }
@@ -32,13 +32,13 @@ namespace Presentacion
 
         private void limpiar()
         {
-            txtBuscar.Text = string.Empty;
+           // txtBuscar.Text = string.Empty;
             txtcodigoperfil.Text = string.Empty;
             txtDescripcion.Text = string.Empty;
             cboPerfiles.SelectedIndex = 0;
         }
 
-        private void CargarLista()
+        /*private void CargarLista()
         {
             try
             {
@@ -59,9 +59,7 @@ namespace Presentacion
             {
                 MessageBox.Show(ex.Message);
             }
-
-
-        }
+        }*/
 
         private void CargarCombos()
         {
@@ -142,7 +140,7 @@ namespace Presentacion
                     MessageBox.Show("Perfil Nuevo agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     limpiar();
-                    CargarLista();
+                    //CargarLista();
                     txtcodigoperfil.Focus(); //coloca el cursor en el control   
                 }
             }
@@ -167,7 +165,7 @@ namespace Presentacion
                     GestorConexiones.GestorConexion_Servicios.ModificarPerfil(p);
                     MessageBox.Show("Perfil modificado");
                     limpiar();
-                    CargarLista();
+                    //CargarLista();
                     txtcodigoperfil.Focus();
                 }
             }
@@ -196,7 +194,7 @@ namespace Presentacion
                     GestorConexiones.GestorConexion_Servicios.EliminarPerfil(p);
                     MessageBox.Show("Perfil eliminado");
                     limpiar();
-                    CargarLista();
+                    //CargarLista();
                     txtcodigoperfil.Focus();
                 }
             }
@@ -206,7 +204,7 @@ namespace Presentacion
             }
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
+       /*private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -219,12 +217,12 @@ namespace Presentacion
 
         }
 
-        private void dgvPerfiles_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        /*private void dgvPerfiles_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtcodigoperfil.Text = dgvPerfiles.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtDescripcion.Text = dgvPerfiles.Rows[e.RowIndex].Cells[1].Value.ToString();
             cboPerfiles.SelectedValue = dgvPerfiles.Rows[e.RowIndex].Cells[2].Value.ToString();//.Equals("Activo") ? true : false;
-        }
+        }*/
         private void btnatras_Clic(object sender, EventArgs e)
         {
 
@@ -235,6 +233,30 @@ namespace Presentacion
             this.Hide();*/
         }
 
+   
+
+        private void btnLista_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lstresultado = new List<Perfiles>();
+
+                //if (txtBuscar.Text.Length == 0 || txtBuscar.Text.Equals("0"))
+                    lstresultado = GestorConexiones.GestorConexion_Servicios.ConsultarPerfiles(new Perfiles { cod_perfil = 0 });
+                /*else
+                    lstresultado = GestorConexiones.GestorConexion_Servicios.ConsultarPerfiles(new Perfiles { cod_perfil = Convert.ToInt32(txtBuscar.Text) });*/
+
+                dgvPerfiles.DataSource = null;
+                dgvPerfiles.Refresh();
+
+                dgvPerfiles.DataSource = lstresultado;
+                dgvPerfiles.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 
 

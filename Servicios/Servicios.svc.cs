@@ -16,6 +16,13 @@ namespace Servicios
             return LogicNegocio.AgregarPerfil(P_Perfil);
         }
 
+
+        public int AgregarUsuarioTransaccion(Usuarios P_Usuarios)
+        {
+            return LogicNegocio.AgregarUsuarioTransaccion(P_Usuarios);
+        }
+
+
         public int AgregarUsuario(Usuarios P_Usuario)
         {
             return LogicNegocio.AgregarUsuario(P_Usuario);
