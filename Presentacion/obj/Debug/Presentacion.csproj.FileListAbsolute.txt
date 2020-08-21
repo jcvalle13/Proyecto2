@@ -15,3 +15,4 @@ C:\Users\jcval\source\repos\Proyecto2\Presentacion\bin\Debug\Presentacion.exe.co
 C:\Users\jcval\source\repos\Proyecto2\Presentacion\bin\Debug\Presentacion.exe
 C:\Users\jcval\source\repos\Proyecto2\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\jcval\source\repos\Proyecto2\Presentacion\obj\Debug\Presentacion.FrmConsultaClientes.resources
+C:\Users\jcval\source\repos\Proyecto2\Presentacion\obj\Debug\Presentacion.FrmEnvioMail.resources

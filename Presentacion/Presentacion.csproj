@@ -59,6 +59,12 @@
     <Compile Include="FrmConsultaClientes.Designer.cs">
       <DependentUpon>FrmConsultaClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEnvioMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEnvioMail.Designer.cs">
+      <DependentUpon>FrmEnvioMail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <EmbeddedResource Include="FrmConsultaClientes.resx">
       <DependentUpon>FrmConsultaClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEnvioMail.resx">
+      <DependentUpon>FrmEnvioMail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +141,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\WCFServicio\Servicios2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WCFServicio\Servicios3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\Entidades.ClientesPrestamos.datasource" />

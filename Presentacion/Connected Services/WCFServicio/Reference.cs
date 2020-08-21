@@ -57,6 +57,12 @@ namespace Presentacion.WCFServicio {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/EliminarUsuario", ReplyAction="http://tempuri.org/IServicios/EliminarUsuarioResponse")]
         System.Threading.Tasks.Task<int> EliminarUsuarioAsync(Entidades.Usuarios P_usuario);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/EnviarCorreoElectronico", ReplyAction="http://tempuri.org/IServicios/EnviarCorreoElectronicoResponse")]
+        void EnviarCorreoElectronico(Entidades.Email P_Correo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/EnviarCorreoElectronico", ReplyAction="http://tempuri.org/IServicios/EnviarCorreoElectronicoResponse")]
+        System.Threading.Tasks.Task EnviarCorreoElectronicoAsync(Entidades.Email P_Correo);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/AgregarPerfil", ReplyAction="http://tempuri.org/IServicios/AgregarPerfilResponse")]
         int AgregarPerfil(Entidades.Perfiles P_Perfil);
         
@@ -169,6 +175,14 @@ namespace Presentacion.WCFServicio {
         
         public System.Threading.Tasks.Task<int> EliminarUsuarioAsync(Entidades.Usuarios P_usuario) {
             return base.Channel.EliminarUsuarioAsync(P_usuario);
+        }
+        
+        public void EnviarCorreoElectronico(Entidades.Email P_Correo) {
+            base.Channel.EnviarCorreoElectronico(P_Correo);
+        }
+        
+        public System.Threading.Tasks.Task EnviarCorreoElectronicoAsync(Entidades.Email P_Correo) {
+            return base.Channel.EnviarCorreoElectronicoAsync(P_Correo);
         }
         
         public int AgregarPerfil(Entidades.Perfiles P_Perfil) {

@@ -78,7 +78,11 @@ namespace Servicios
             return LogicNegocio.Consultar_Clientes_Prestamos();
         }
 
+        public void EnviarCorreoElectronico(Email P_Correo)
+        {
+            LogicNegocio.EnviarCorreoElectronico( P_Correo);
 
+        }
 
     }
 }

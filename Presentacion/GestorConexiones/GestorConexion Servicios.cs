@@ -86,6 +86,7 @@ namespace Presentacion.GestorConexiones
                     objservicio.Close();
 
             }
+
         }
 
         public static bool VerificarUsuario(Usuarios P_usuario)
@@ -230,6 +231,28 @@ namespace Presentacion.GestorConexiones
 
             }
         }
+
+        public static void EnviarCorreoElectronico(Email P_Correo)
+        {
+            WCFServicio.ServiciosClient objservicio = null;
+
+            try
+            {
+                objservicio = new WCFServicio.ServiciosClient();
+                objservicio.EnviarCorreoElectronico(P_Correo);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (objservicio != null)
+                    objservicio.Close();
+            }
+
+        }
+
 
         #endregion
 

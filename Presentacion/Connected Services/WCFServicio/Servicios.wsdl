@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:50957/Servicios.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:50957/Servicios.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:50957/Servicios.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Entidades" />
+      <xsd:import schemaLocation="http://localhost:50957/Servicios.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IServicios_AgregarUsuario_InputMessage">
@@ -48,6 +49,12 @@
   </wsdl:message>
   <wsdl:message name="IServicios_EliminarUsuario_OutputMessage">
     <wsdl:part name="parameters" element="tns:EliminarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_EnviarCorreoElectronico_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCorreoElectronico" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_EnviarCorreoElectronico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCorreoElectronicoResponse" />
   </wsdl:message>
   <wsdl:message name="IServicios_AgregarPerfil_InputMessage">
     <wsdl:part name="parameters" element="tns:AgregarPerfil" />
@@ -107,6 +114,10 @@
     <wsdl:operation name="EliminarUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicios/EliminarUsuario" message="tns:IServicios_EliminarUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicios/EliminarUsuarioResponse" message="tns:IServicios_EliminarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoElectronico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/EnviarCorreoElectronico" message="tns:IServicios_EnviarCorreoElectronico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/EnviarCorreoElectronicoResponse" message="tns:IServicios_EnviarCorreoElectronico_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AgregarPerfil">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicios/AgregarPerfil" message="tns:IServicios_AgregarPerfil_InputMessage" />
@@ -187,6 +198,15 @@
     </wsdl:operation>
     <wsdl:operation name="EliminarUsuario">
       <soap:operation soapAction="http://tempuri.org/IServicios/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoElectronico">
+      <soap:operation soapAction="http://tempuri.org/IServicios/EnviarCorreoElectronico" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -97,10 +97,22 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="EnviarCorreoElectronico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="P_Correo" nillable="true" type="q9:Email" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarCorreoElectronicoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="AgregarPerfil">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="P_Perfil" nillable="true" type="q9:Perfiles" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="P_Perfil" nillable="true" type="q10:Perfiles" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -114,7 +126,7 @@
   <xs:element name="ModificarPerfil">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="P_Perfil" nillable="true" type="q10:Perfiles" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="P_Perfil" nillable="true" type="q11:Perfiles" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -128,7 +140,7 @@
   <xs:element name="EliminarPerfil">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="P_Perfil" nillable="true" type="q11:Perfiles" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="P_Perfil" nillable="true" type="q12:Perfiles" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -142,14 +154,14 @@
   <xs:element name="ConsultarPerfiles">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="P_Perfil" nillable="true" type="q12:Perfiles" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="P_Perfil" nillable="true" type="q13:Perfiles" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ConsultarPerfilesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="ConsultarPerfilesResult" nillable="true" type="q13:ArrayOfPerfiles" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="ConsultarPerfilesResult" nillable="true" type="q14:ArrayOfPerfiles" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -161,7 +173,7 @@
   <xs:element name="Consultar_Clientes_PrestamosResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="Consultar_Clientes_PrestamosResult" nillable="true" type="q14:ArrayOfClientesPrestamos" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="Consultar_Clientes_PrestamosResult" nillable="true" type="q15:ArrayOfClientesPrestamos" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -32,6 +32,9 @@ namespace Servicios
         [OperationContract]
         int EliminarUsuario(Usuarios P_usuario);
 
+        [OperationContract]
+        void EnviarCorreoElectronico(Email P_Correo);
+
         #endregion
 
         #region Perfiles

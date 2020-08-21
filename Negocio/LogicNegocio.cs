@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Net;
+using System.Net.Mail;
 using AccesoDatos;
 using Entidades;
 
@@ -115,8 +117,6 @@ namespace Negocio
             }
         }
 
-
-
         public static int ModificarUsuario(Usuarios P_Usuario)
         {
             try
@@ -206,6 +206,48 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        public static void EnviarCorreoElectronico(Email P_Correo)
+        {
+            MailMessage Correo = new MailMessage();
+            SmtpClient envio = new SmtpClient();
+
+            try
+            {
+                //Aqui se asigna los diferentes valores recibidos en las propidades correspondientes
+                //para configurar el objeto Mensaje de correo electrónico
+                Correo.From = new MailAddress(P_Correo.Remitente);
+                Correo.Subject = P_Correo.Asunto;
+                Correo.Body = P_Correo.MensajeCorreo;
+                Correo.IsBodyHtml = true;
+                Correo.Priority = MailPriority.Normal;
+
+                foreach (string destinatario in P_Correo.Destinatario)
+                    Correo.To.Add(new MailAddress(destinatario));
+
+                //Configura el servidor de correo que se va utilizar
+                envio.Host = "smtp.gmail.com";
+                envio.Port = 587;
+                envio.EnableSsl = true;
+                envio.UseDefaultCredentials = false;
+                envio.Credentials = new NetworkCredential("ycalv13@gmail.com", "Prueba+13");
+
+                //Se realiza el envio del correo
+                envio.Send(Correo);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Correo.Dispose(); //Libera la memoria
+            }
+        }
+
+
+
+
         #endregion
 
         #region Perfiles

@@ -66,5 +66,12 @@ namespace Presentacion
             }
         }
 
+        private void linkRecuperarContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmEnvioMail frm = new FrmEnvioMail();
+            frm.Show();
+
+         
+        }
     }
 }
