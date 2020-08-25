@@ -58,5 +58,10 @@ namespace Servicios
         List<ClientesPrestamos> Consultar_Clientes_Prestamos();
         #endregion
 
+        #region ListaPrestamos
+        [OperationContract]
+        List<ListaRegistroPrestamos> Consultar_Lista_Prestamos();
+        #endregion
+
     }
 }

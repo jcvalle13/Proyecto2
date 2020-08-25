@@ -40,20 +40,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cboPerfiles = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gdvUsuarios = new System.Windows.Forms.DataGridView();
             this.btnListaUsuario = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvUsuarios)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btneliminar
             // 
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btneliminar.Location = new System.Drawing.Point(755, 306);
+            this.btneliminar.Location = new System.Drawing.Point(217, 16);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(82, 44);
             this.btneliminar.TabIndex = 31;
@@ -64,7 +66,7 @@
             // btnmenu
             // 
             this.btnmenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnmenu.Location = new System.Drawing.Point(855, 305);
+            this.btnmenu.Location = new System.Drawing.Point(339, 16);
             this.btnmenu.Name = "btnmenu";
             this.btnmenu.Size = new System.Drawing.Size(82, 45);
             this.btnmenu.TabIndex = 30;
@@ -75,7 +77,7 @@
             // btnmodificar
             // 
             this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnmodificar.Location = new System.Drawing.Point(653, 306);
+            this.btnmodificar.Location = new System.Drawing.Point(113, 16);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(82, 44);
             this.btnmodificar.TabIndex = 29;
@@ -87,7 +89,7 @@
             // 
             this.btnagregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnagregar.Location = new System.Drawing.Point(555, 306);
+            this.btnagregar.Location = new System.Drawing.Point(6, 16);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(82, 44);
             this.btnagregar.TabIndex = 28;
@@ -163,16 +165,6 @@
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 110);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 70);
-            this.pictureBox1.TabIndex = 33;
-            this.pictureBox1.TabStop = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -191,6 +183,16 @@
             this.cboPerfiles.Name = "cboPerfiles";
             this.cboPerfiles.Size = new System.Drawing.Size(140, 21);
             this.cboPerfiles.TabIndex = 28;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 110);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 70);
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
             // 
             // gdvUsuarios
             // 
@@ -216,20 +218,29 @@
             this.btnListaUsuario.UseVisualStyleBackColor = true;
             this.btnListaUsuario.Click += new System.EventHandler(this.btnListaUsuario_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnagregar);
+            this.groupBox3.Controls.Add(this.btnmodificar);
+            this.groupBox3.Controls.Add(this.btneliminar);
+            this.groupBox3.Controls.Add(this.btnmenu);
+            this.groupBox3.Location = new System.Drawing.Point(553, 284);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(427, 66);
+            this.groupBox3.TabIndex = 38;
+            this.groupBox3.TabStop = false;
+            // 
             // FrmManUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 362);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.gdvUsuarios);
             this.Controls.Add(this.btnListaUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btneliminar);
-            this.Controls.Add(this.btnmenu);
-            this.Controls.Add(this.btnmodificar);
-            this.Controls.Add(this.btnagregar);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmManUsuarios";
@@ -239,6 +250,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvUsuarios)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -260,5 +272,6 @@
         private System.Windows.Forms.ComboBox cboPerfiles;
         private System.Windows.Forms.DataGridView gdvUsuarios;
         private System.Windows.Forms.Button btnListaUsuario;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

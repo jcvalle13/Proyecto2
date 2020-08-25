@@ -253,7 +253,6 @@ namespace Presentacion.GestorConexiones
 
         }
 
-
         #endregion
 
         #region ConsultaPrestamocliente
@@ -276,6 +275,32 @@ namespace Presentacion.GestorConexiones
             }
             #endregion
         }
+
+            #region ListaPrestamos
+
+            public static List<ListaRegistroPrestamos> Consultar_Lista_Prestamos()
+            {
+                WCFServicio.ServiciosClient objservicio = null;
+                try
+                {
+                    objservicio = new WCFServicio.ServiciosClient();
+                    return objservicio.Consultar_Lista_Prestamos();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    if (objservicio != null)
+                        objservicio.Close();
+                }
+
+
+                #endregion
+
+
+            }
     }
 }
 

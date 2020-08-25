@@ -177,4 +177,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Consultar_Lista_Prestamos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Consultar_Lista_PrestamosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Entidades" minOccurs="0" name="Consultar_Lista_PrestamosResult" nillable="true" type="q16:ArrayOfListaRegistroPrestamos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

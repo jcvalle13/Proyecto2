@@ -22,14 +22,14 @@ namespace Presentacion
 
             mantenimientosToolStripMenuItem.Visible = false;
             consultasToolStripMenuItem.Visible = false;
-           
+            registroToolStripMenuItem.Visible = false;
             foreach (Usuarios item in lstusuarios)
             {
                 switch (item.Perfiles.cod_perfil)
                 {
                     case 1: { mantenimientosToolStripMenuItem.Visible = true; } break;
                     case 2: { consultasToolStripMenuItem.Visible = true; } break;
-                    case 3: { } break;
+                    case 3: { registroToolStripMenuItem.Visible = true; } break;
                     case 4: { } break;
                     case 5: { } break;
 
@@ -80,6 +80,19 @@ namespace Presentacion
             FrmLogin frm = new FrmLogin();
             frm.Show();
             this.Hide();
+        }
+
+        private void nuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmNuevoCliente frm = new FrmNuevoCliente();
+            frm.MdiParent = this;
+            frm.Show();
+
+        }
+
+        private void solicitudToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

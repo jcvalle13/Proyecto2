@@ -360,9 +360,29 @@ namespace Negocio
             }
         }
 
+        #endregion
 
+        #region Prestamos
+
+        public static List<ListaRegistroPrestamos> Consultar_Lista_Prestamos()
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"SELECT NombCliente, Apellido1, Apellido2, ID, Cantidad, Operacion, FechaSolicitud FROM TablaOperacion";
+
+                Acceso objacceso = new Acceso();
+
+                return objacceso.Consultar_Lista_Prestamos(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         #endregion
+
 
     }
 }

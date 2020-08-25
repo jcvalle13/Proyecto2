@@ -92,6 +92,12 @@ namespace Presentacion.WCFServicio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/Consultar_Clientes_Prestamos", ReplyAction="http://tempuri.org/IServicios/Consultar_Clientes_PrestamosResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<Entidades.ClientesPrestamos>> Consultar_Clientes_PrestamosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/Consultar_Lista_Prestamos", ReplyAction="http://tempuri.org/IServicios/Consultar_Lista_PrestamosResponse")]
+        System.Collections.Generic.List<Entidades.ListaRegistroPrestamos> Consultar_Lista_Prestamos();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/Consultar_Lista_Prestamos", ReplyAction="http://tempuri.org/IServicios/Consultar_Lista_PrestamosResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<Entidades.ListaRegistroPrestamos>> Consultar_Lista_PrestamosAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -223,6 +229,14 @@ namespace Presentacion.WCFServicio {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<Entidades.ClientesPrestamos>> Consultar_Clientes_PrestamosAsync() {
             return base.Channel.Consultar_Clientes_PrestamosAsync();
+        }
+        
+        public System.Collections.Generic.List<Entidades.ListaRegistroPrestamos> Consultar_Lista_Prestamos() {
+            return base.Channel.Consultar_Lista_Prestamos();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<Entidades.ListaRegistroPrestamos>> Consultar_Lista_PrestamosAsync() {
+            return base.Channel.Consultar_Lista_PrestamosAsync();
         }
     }
 }

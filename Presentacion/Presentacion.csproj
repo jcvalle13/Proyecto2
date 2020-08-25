@@ -65,6 +65,12 @@
     <Compile Include="FrmEnvioMail.Designer.cs">
       <DependentUpon>FrmEnvioMail.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListadoPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoPrestamos.Designer.cs">
+      <DependentUpon>FrmListadoPrestamos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,18 @@
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevoCliente.Designer.cs">
+      <DependentUpon>FrmNuevoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSolicitudPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSolicitudPrestamo.Designer.cs">
+      <DependentUpon>FrmSolicitudPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestorConexiones\GestorConexion Servicios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +129,9 @@
     <EmbeddedResource Include="FrmEnvioMail.resx">
       <DependentUpon>FrmEnvioMail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoPrestamos.resx">
+      <DependentUpon>FrmListadoPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevoCliente.resx">
+      <DependentUpon>FrmNuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSolicitudPrestamo.resx">
+      <DependentUpon>FrmSolicitudPrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -147,6 +174,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\Entidades.ClientesPrestamos.datasource" />
+    <None Include="Properties\DataSources\Entidades.ListaRegistroPrestamos.datasource" />
     <None Include="Properties\DataSources\Entidades.Perfiles.datasource" />
     <None Include="Properties\DataSources\Entidades.Usuarios.datasource" />
   </ItemGroup>

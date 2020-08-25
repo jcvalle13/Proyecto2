@@ -37,6 +37,9 @@
             this.perfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.solicitudToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +48,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sistemaToolStripMenuItem,
             this.mantenimientosToolStripMenuItem,
-            this.consultasToolStripMenuItem});
+            this.consultasToolStripMenuItem,
+            this.registroToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
@@ -66,14 +70,14 @@
             // LogoffToolStripMenuItem
             // 
             this.LogoffToolStripMenuItem.Name = "LogoffToolStripMenuItem";
-            this.LogoffToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.LogoffToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.LogoffToolStripMenuItem.Text = "Log off";
             this.LogoffToolStripMenuItem.Click += new System.EventHandler(this.LogoffToolStripMenuItem_Click_1);
             // 
             // regresarAlInicioToolStripMenuItem
             // 
             this.regresarAlInicioToolStripMenuItem.Name = "regresarAlInicioToolStripMenuItem";
-            this.regresarAlInicioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.regresarAlInicioToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.regresarAlInicioToolStripMenuItem.Text = "Cambiar de usuario";
             this.regresarAlInicioToolStripMenuItem.Click += new System.EventHandler(this.regresarAlInicioToolStripMenuItem_Click);
             // 
@@ -90,14 +94,14 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click_1);
             // 
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.perfilesToolStripMenuItem.Text = "Perfiles";
             this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.perfilesToolStripMenuItem_Click_1);
             // 
@@ -113,9 +117,32 @@
             // listadoDeClientesToolStripMenuItem
             // 
             this.listadoDeClientesToolStripMenuItem.Name = "listadoDeClientesToolStripMenuItem";
-            this.listadoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.listadoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.listadoDeClientesToolStripMenuItem.Text = "Listado de Clientes";
             this.listadoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.listadoDeClientesToolStripMenuItem_Click);
+            // 
+            // registroToolStripMenuItem
+            // 
+            this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoClienteToolStripMenuItem,
+            this.solicitudToolStripMenuItem});
+            this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
+            this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.registroToolStripMenuItem.Text = "Registro";
+            // 
+            // nuevoClienteToolStripMenuItem
+            // 
+            this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
+            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoClienteToolStripMenuItem.Text = "Nuevo Cliente";
+            this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
+            // 
+            // solicitudToolStripMenuItem
+            // 
+            this.solicitudToolStripMenuItem.Name = "solicitudToolStripMenuItem";
+            this.solicitudToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.solicitudToolStripMenuItem.Text = "Solicitud Préstamos";
+            this.solicitudToolStripMenuItem.Click += new System.EventHandler(this.solicitudToolStripMenuItem_Click);
             // 
             // FrmMenu
             // 
@@ -125,7 +152,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Bookman Old Style", 9F);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SISTEMA BANCARIO";
@@ -148,5 +175,8 @@
         private System.Windows.Forms.ToolStripMenuItem perfilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeClientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevoClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem solicitudToolStripMenuItem;
     }
 }

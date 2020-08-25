@@ -43,9 +43,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLista = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPerfiles
@@ -135,7 +137,7 @@
             // btnatras
             // 
             this.btnatras.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnatras.Location = new System.Drawing.Point(813, 262);
+            this.btnatras.Location = new System.Drawing.Point(307, 18);
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(74, 40);
             this.btnatras.TabIndex = 8;
@@ -148,7 +150,7 @@
             this.btnEliminar.BackColor = System.Drawing.SystemColors.Control;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(700, 261);
+            this.btnEliminar.Location = new System.Drawing.Point(208, 18);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(93, 40);
             this.btnEliminar.TabIndex = 6;
@@ -162,7 +164,7 @@
             this.btnModificar.BackColor = System.Drawing.SystemColors.Control;
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(599, 262);
+            this.btnModificar.Location = new System.Drawing.Point(107, 19);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(95, 39);
             this.btnModificar.TabIndex = 5;
@@ -176,7 +178,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(498, 262);
+            this.button1.Location = new System.Drawing.Point(6, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 39);
             this.button1.TabIndex = 25;
@@ -206,19 +208,28 @@
             this.btnLista.UseVisualStyleBackColor = true;
             this.btnLista.Click += new System.EventHandler(this.btnLista_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnModificar);
+            this.groupBox2.Controls.Add(this.btnEliminar);
+            this.groupBox2.Controls.Add(this.btnatras);
+            this.groupBox2.Location = new System.Drawing.Point(513, 253);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(389, 66);
+            this.groupBox2.TabIndex = 36;
+            this.groupBox2.TabStop = false;
+            // 
             // FrmManPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 331);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnLista);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnatras);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvPerfiles);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnModificar);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmManPerfiles";
@@ -228,6 +239,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -247,6 +259,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLista;
-       
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

@@ -84,5 +84,12 @@ namespace Servicios
 
         }
 
+        public List<ListaRegistroPrestamos> Consultar_Lista_Prestamos()
+        {
+            return LogicNegocio.Consultar_Lista_Prestamos();
+
+
+        }
+
     }
 }
