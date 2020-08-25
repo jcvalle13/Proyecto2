@@ -126,9 +126,10 @@
             this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoClienteToolStripMenuItem,
             this.solicitudToolStripMenuItem});
+            this.registroToolStripMenuItem.Font = new System.Drawing.Font("Bookman Old Style", 9F);
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
-            this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.registroToolStripMenuItem.Text = "Registro";
+            this.registroToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.registroToolStripMenuItem.Text = "Registros";
             // 
             // nuevoClienteToolStripMenuItem
             // 
