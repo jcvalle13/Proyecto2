@@ -47,7 +47,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(9, 48);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(139, 136);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 136);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
@@ -95,13 +95,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(836, 450);
             this.Controls.Add(this.cboestado);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnatras);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvlistaclientes);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmListadoxEstado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Clientes por Estado";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvlistaclientes)).EndInit();

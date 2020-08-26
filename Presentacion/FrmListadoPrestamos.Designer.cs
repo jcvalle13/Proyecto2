@@ -86,6 +86,8 @@
             this.Controls.Add(this.btnmostrar);
             this.Controls.Add(this.dgvprestamos);
             this.Controls.Add(this.btnatras);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmListadoPrestamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de solitudes Préstamos";

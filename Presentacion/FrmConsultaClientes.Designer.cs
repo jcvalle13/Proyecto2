@@ -86,6 +86,8 @@
             this.Controls.Add(this.btnmostrar);
             this.Controls.Add(this.dgvclientes);
             this.Controls.Add(this.btnatras);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmConsultaClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Clientes";

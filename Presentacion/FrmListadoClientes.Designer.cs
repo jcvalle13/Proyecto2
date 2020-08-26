@@ -86,7 +86,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 50);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 145);
+            this.pictureBox1.Size = new System.Drawing.Size(142, 145);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -94,13 +94,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(837, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnatras);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtidcliente);
             this.Controls.Add(this.dgvlistaclientes);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmListadoClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvlistaclientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
