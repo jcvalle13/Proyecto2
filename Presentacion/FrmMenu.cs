@@ -92,7 +92,16 @@ namespace Presentacion
 
         private void solicitudToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FrmSolicitudPrestamo frm = new FrmSolicitudPrestamo();
+            frm.MdiParent = this;
+            frm.Show();
+        }
 
+        private void listadoDePrestamosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListadoPrestamos frm = new FrmListadoPrestamos();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 

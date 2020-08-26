@@ -296,8 +296,7 @@ namespace Presentacion.GestorConexiones
                         objservicio.Close();
                 }
 
-
-                #endregion
+            #endregion
 
 
             }

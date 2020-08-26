@@ -30,11 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSolicitudPrestamo));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnAgregarPresta = new System.Windows.Forms.Button();
+            this.btnModificarPresta = new System.Windows.Forms.Button();
+            this.btnEliminarPresta = new System.Windows.Forms.Button();
             this.btnatras = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtCivil = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtProducto = new System.Windows.Forms.TextBox();
@@ -51,8 +53,6 @@
             this.txt1Apellido = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,9 +60,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.btnModificar);
-            this.groupBox2.Controls.Add(this.btnEliminar);
+            this.groupBox2.Controls.Add(this.btnAgregarPresta);
+            this.groupBox2.Controls.Add(this.btnModificarPresta);
+            this.groupBox2.Controls.Add(this.btnEliminarPresta);
             this.groupBox2.Controls.Add(this.btnatras);
             this.groupBox2.Location = new System.Drawing.Point(1008, 58);
             this.groupBox2.Name = "groupBox2";
@@ -70,44 +70,45 @@
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             // 
-            // button1
+            // btnAgregarPresta
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(6, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 39);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Agregar";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAgregarPresta.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAgregarPresta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAgregarPresta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarPresta.Location = new System.Drawing.Point(6, 19);
+            this.btnAgregarPresta.Name = "btnAgregarPresta";
+            this.btnAgregarPresta.Size = new System.Drawing.Size(95, 39);
+            this.btnAgregarPresta.TabIndex = 25;
+            this.btnAgregarPresta.Text = "Agregar";
+            this.btnAgregarPresta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAgregarPresta.UseVisualStyleBackColor = false;
+            this.btnAgregarPresta.Click += new System.EventHandler(this.btnAgregarPresta_Click);
             // 
-            // btnModificar
+            // btnModificarPresta
             // 
-            this.btnModificar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(6, 67);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(95, 39);
-            this.btnModificar.TabIndex = 5;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificarPresta.BackColor = System.Drawing.SystemColors.Control;
+            this.btnModificarPresta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnModificarPresta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarPresta.Location = new System.Drawing.Point(6, 67);
+            this.btnModificarPresta.Name = "btnModificarPresta";
+            this.btnModificarPresta.Size = new System.Drawing.Size(95, 39);
+            this.btnModificarPresta.TabIndex = 5;
+            this.btnModificarPresta.Text = "Modificar";
+            this.btnModificarPresta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnModificarPresta.UseVisualStyleBackColor = false;
             // 
-            // btnEliminar
+            // btnEliminarPresta
             // 
-            this.btnEliminar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(6, 119);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(95, 40);
-            this.btnEliminar.TabIndex = 6;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminarPresta.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEliminarPresta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEliminarPresta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarPresta.Location = new System.Drawing.Point(6, 119);
+            this.btnEliminarPresta.Name = "btnEliminarPresta";
+            this.btnEliminarPresta.Size = new System.Drawing.Size(95, 40);
+            this.btnEliminarPresta.TabIndex = 6;
+            this.btnEliminarPresta.Text = "Eliminar";
+            this.btnEliminarPresta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEliminarPresta.UseVisualStyleBackColor = false;
             // 
             // btnatras
             // 
@@ -118,6 +119,7 @@
             this.btnatras.TabIndex = 8;
             this.btnatras.Text = "Atrás";
             this.btnatras.UseVisualStyleBackColor = true;
+            this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
             // 
             // groupBox1
             // 
@@ -144,6 +146,23 @@
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(504, 85);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 15);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "# Operación:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(587, 82);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 21);
+            this.textBox1.TabIndex = 23;
             // 
             // txtCivil
             // 
@@ -284,23 +303,6 @@
             this.label7.TabIndex = 41;
             this.label7.Text = "Nuevo Préstamo";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(504, 85);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 15);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "# Operación:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(587, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 21);
-            this.textBox1.TabIndex = 23;
-            // 
             // FrmSolicitudPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,6 +313,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmSolicitudPrestamo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro Solitud Prestamo";
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -324,9 +327,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnAgregarPresta;
+        private System.Windows.Forms.Button btnModificarPresta;
+        private System.Windows.Forms.Button btnEliminarPresta;
         private System.Windows.Forms.Button btnatras;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtCivil;
