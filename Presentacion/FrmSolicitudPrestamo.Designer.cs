@@ -162,14 +162,14 @@
             this.txtOperacion.Location = new System.Drawing.Point(587, 82);
             this.txtOperacion.Name = "txtOperacion";
             this.txtOperacion.Size = new System.Drawing.Size(166, 21);
-            this.txtOperacion.TabIndex = 23;
+            this.txtOperacion.TabIndex = 5;
             // 
             // txtFecha
             // 
             this.txtFecha.Location = new System.Drawing.Point(91, 128);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(166, 21);
-            this.txtFecha.TabIndex = 22;
+            this.txtFecha.TabIndex = 6;
             // 
             // label6
             // 
@@ -185,7 +185,7 @@
             this.txtObservacion.Location = new System.Drawing.Point(91, 175);
             this.txtObservacion.Name = "txtObservacion";
             this.txtObservacion.Size = new System.Drawing.Size(409, 21);
-            this.txtObservacion.TabIndex = 20;
+            this.txtObservacion.TabIndex = 7;
             // 
             // label3
             // 

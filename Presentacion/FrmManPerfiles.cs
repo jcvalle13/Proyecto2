@@ -129,7 +129,6 @@ namespace Presentacion
                         return;
                     }
 
-
                     Perfiles perfil_user = new Perfiles();
 
                     perfil_user.cod_perfil = Convert.ToInt32(txtcodigoperfil.Text.Trim());
