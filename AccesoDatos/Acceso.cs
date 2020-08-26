@@ -86,7 +86,7 @@ namespace AccesoDatos
             }
         }
 
-        public List<Usuarios> Consultar_Usuarios(SQLParametros P_Peticion)
+       public List<Usuarios> Consultar_Usuarios(SQLParametros P_Peticion)
         {
 
             List<Usuarios> lstresultados = new List<Usuarios>();

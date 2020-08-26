@@ -92,6 +92,12 @@
   <wsdl:message name="IServicios_Consultar_Lista_Prestamos_OutputMessage">
     <wsdl:part name="parameters" element="tns:Consultar_Lista_PrestamosResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicios_AgregarPrestamo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarPrestamo" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_AgregarPrestamo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarPrestamoResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServicios">
     <wsdl:operation name="AgregarUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicios/AgregarUsuario" message="tns:IServicios_AgregarUsuario_InputMessage" />
@@ -148,6 +154,10 @@
     <wsdl:operation name="Consultar_Lista_Prestamos">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicios/Consultar_Lista_Prestamos" message="tns:IServicios_Consultar_Lista_Prestamos_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicios/Consultar_Lista_PrestamosResponse" message="tns:IServicios_Consultar_Lista_Prestamos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarPrestamo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/AgregarPrestamo" message="tns:IServicios_AgregarPrestamo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/AgregarPrestamoResponse" message="tns:IServicios_AgregarPrestamo_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServicios" type="tns:IServicios">
@@ -271,6 +281,15 @@
     </wsdl:operation>
     <wsdl:operation name="Consultar_Lista_Prestamos">
       <soap:operation soapAction="http://tempuri.org/IServicios/Consultar_Lista_Prestamos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarPrestamo">
+      <soap:operation soapAction="http://tempuri.org/IServicios/AgregarPrestamo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

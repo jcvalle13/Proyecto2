@@ -16,7 +16,6 @@ namespace Servicios
             return LogicNegocio.AgregarPerfil(P_Perfil);
         }
 
-
         public int AgregarUsuarioTransaccion(Usuarios P_Usuarios)
         {
             return LogicNegocio.AgregarUsuarioTransaccion(P_Usuarios);
@@ -88,7 +87,11 @@ namespace Servicios
         {
             return LogicNegocio.Consultar_Lista_Prestamos();
 
+        }
 
+        public int AgregarPrestamo(ListaRegistroPrestamos P_Prestamo)
+        {
+            return LogicNegocio.AgregarPrestamo(P_Prestamo);
         }
 
     }

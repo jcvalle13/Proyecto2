@@ -48,7 +48,6 @@ namespace Servicios
         [OperationContract]
         int EliminarPerfil(Perfiles P_Perfil);
 
-
         [OperationContract]
         List<Perfiles> ConsultarPerfiles(Perfiles P_Perfil);
         #endregion
@@ -61,7 +60,13 @@ namespace Servicios
         #region ListaPrestamos
         [OperationContract]
         List<ListaRegistroPrestamos> Consultar_Lista_Prestamos();
+
+        [OperationContract]
+        int AgregarPrestamo(ListaRegistroPrestamos P_Prestamo);
         #endregion
+
+
+
 
     }
 }

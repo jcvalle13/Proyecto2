@@ -18,14 +18,31 @@ namespace Presentacion
         public List<ListaRegistroPrestamos> lstresultado { get; set; }
 
         public bool EsError { get; set; }
-        #endregion 
+        #endregion
+
+
+        private void limpiar()
+        {
+            txtNombre.Text = string.Empty;
+            txt1Apellido.Text = string.Empty;
+            txt2apellido.Text = string.Empty;
+            txtID.Text = string.Empty;
+            txtCantidad.Text = string.Empty;
+            txtOperacion.Text = string.Empty;
+            txtFecha.Text = string.Empty;
+            txtObservacion.Text = string.Empty;
+
+        }
+
 
         public FrmSolicitudPrestamo()
         {
+
+            lstresultado = new List<ListaRegistroPrestamos>();
             InitializeComponent();
         }
 
-        private bool VerificarExistenciaCodigo()
+        private bool VerificarExistenciaPrestamo()
         {
             bool L_resultado = false;
 
@@ -60,25 +77,28 @@ namespace Presentacion
                 if (!EsError)
 
                 {
-                    if (VerificarExistenciaCodigo())
+                    if (VerificarExistenciaPrestamo())
                     {
                         MessageBox.Show("Identificación digitado ya existe en base de datos, por favor cambiarlo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-
-
                     ListaRegistroPrestamos Id_cliente = new ListaRegistroPrestamos();
 
-                    Id_cliente.Identificacion = Convert.ToInt32(txtID.Text.Trim());
-                    Id_cliente.descripcion = txtDescripcion.Text.Trim();
-                    Id_cliente.estado = (cboPerfiles.SelectedValue.ToString().Equals("true")) ? true : false;
 
-                    GestorConexiones.GestorConexion_Servicios.AgregarPerfil(ListaRegistroPrestamos);
-                    MessageBox.Show("Perfil Nuevo agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Id_cliente.Nombre = txtNombre.Text.Trim();
+                    Id_cliente.Apellido1 = txt1Apellido.Text.Trim();
+                    Id_cliente.Apellido2 = txt1Apellido.Text.Trim();
+                    Id_cliente.Identificacion = Convert.ToInt32(txtID.Text.Trim());
+                    Id_cliente.Cantidad = Convert.ToInt32(txtCantidad.Text.Trim());
+                    Id_cliente.Operacion = Convert.ToInt32(txtOperacion.Text.Trim());
+                    Id_cliente.Fechasolicitud = txtFecha.Text.Trim();
+                    Id_cliente.Observacion = txtObservacion.Text.Trim();
+
+                    GestorConexiones.GestorConexion_Servicios.AgregarPrestamo(Id_cliente);
+                    MessageBox.Show("Nuevo Prestamo agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     limpiar();
-                    //CargarLista();
-                    txtcodigoperfil.Focus(); //coloca el cursor en el control   
+                    txtNombre.Focus(); //coloca el cursor en el control   
                 }
             }
             catch (Exception ex)
@@ -93,7 +113,7 @@ namespace Presentacion
             this.Close();
         }
 
-        #endregion Eventos
+        #endregion
 
     }
 }

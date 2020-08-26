@@ -36,12 +36,12 @@
             this.btnatras = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtCivil = new System.Windows.Forms.TextBox();
+            this.txtOperacion = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtemail = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt2apellido = new System.Windows.Forms.TextBox();
@@ -124,12 +124,12 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.txtCivil);
+            this.groupBox1.Controls.Add(this.txtOperacion);
+            this.groupBox1.Controls.Add(this.txtFecha);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtProducto);
+            this.groupBox1.Controls.Add(this.txtObservacion);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtemail);
+            this.groupBox1.Controls.Add(this.txtCantidad);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txt2apellido);
@@ -157,19 +157,19 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "# Operación:";
             // 
-            // textBox1
+            // txtOperacion
             // 
-            this.textBox1.Location = new System.Drawing.Point(587, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 21);
-            this.textBox1.TabIndex = 23;
+            this.txtOperacion.Location = new System.Drawing.Point(587, 82);
+            this.txtOperacion.Name = "txtOperacion";
+            this.txtOperacion.Size = new System.Drawing.Size(166, 21);
+            this.txtOperacion.TabIndex = 23;
             // 
-            // txtCivil
+            // txtFecha
             // 
-            this.txtCivil.Location = new System.Drawing.Point(91, 128);
-            this.txtCivil.Name = "txtCivil";
-            this.txtCivil.Size = new System.Drawing.Size(166, 21);
-            this.txtCivil.TabIndex = 22;
+            this.txtFecha.Location = new System.Drawing.Point(91, 128);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(166, 21);
+            this.txtFecha.TabIndex = 22;
             // 
             // label6
             // 
@@ -180,12 +180,12 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Fecha Inicio";
             // 
-            // txtProducto
+            // txtObservacion
             // 
-            this.txtProducto.Location = new System.Drawing.Point(91, 175);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(409, 21);
-            this.txtProducto.TabIndex = 20;
+            this.txtObservacion.Location = new System.Drawing.Point(91, 175);
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.Size = new System.Drawing.Size(409, 21);
+            this.txtObservacion.TabIndex = 20;
             // 
             // label3
             // 
@@ -197,12 +197,12 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Cantidad:";
             // 
-            // txtemail
+            // txtCantidad
             // 
-            this.txtemail.Location = new System.Drawing.Point(334, 85);
-            this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(166, 21);
-            this.txtemail.TabIndex = 5;
+            this.txtCantidad.Location = new System.Drawing.Point(334, 85);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(166, 21);
+            this.txtCantidad.TabIndex = 5;
             // 
             // txtID
             // 
@@ -332,11 +332,11 @@
         private System.Windows.Forms.Button btnEliminarPresta;
         private System.Windows.Forms.Button btnatras;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtCivil;
+        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.TextBox txtObservacion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt2apellido;
@@ -349,6 +349,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtOperacion;
     }
 }

@@ -98,6 +98,12 @@ namespace Presentacion.WCFServicio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/Consultar_Lista_Prestamos", ReplyAction="http://tempuri.org/IServicios/Consultar_Lista_PrestamosResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<Entidades.ListaRegistroPrestamos>> Consultar_Lista_PrestamosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/AgregarPrestamo", ReplyAction="http://tempuri.org/IServicios/AgregarPrestamoResponse")]
+        int AgregarPrestamo(Entidades.ListaRegistroPrestamos P_Prestamo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicios/AgregarPrestamo", ReplyAction="http://tempuri.org/IServicios/AgregarPrestamoResponse")]
+        System.Threading.Tasks.Task<int> AgregarPrestamoAsync(Entidades.ListaRegistroPrestamos P_Prestamo);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -237,6 +243,14 @@ namespace Presentacion.WCFServicio {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<Entidades.ListaRegistroPrestamos>> Consultar_Lista_PrestamosAsync() {
             return base.Channel.Consultar_Lista_PrestamosAsync();
+        }
+        
+        public int AgregarPrestamo(Entidades.ListaRegistroPrestamos P_Prestamo) {
+            return base.Channel.AgregarPrestamo(P_Prestamo);
+        }
+        
+        public System.Threading.Tasks.Task<int> AgregarPrestamoAsync(Entidades.ListaRegistroPrestamos P_Prestamo) {
+            return base.Channel.AgregarPrestamoAsync(P_Prestamo);
         }
     }
 }

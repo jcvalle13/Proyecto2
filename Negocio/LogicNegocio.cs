@@ -245,9 +245,6 @@ namespace Negocio
             }
         }
 
-
-
-
         #endregion
 
         #region Perfiles
@@ -380,6 +377,28 @@ namespace Negocio
                 throw ex;
             }
         }
+
+
+        public static int AgregarPrestamo(ListaRegistroPrestamos P_Prestamo)
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+
+                objpeticion.Peticion = @"INSERT INTO TablaOperacion VALUES ('" + P_Prestamo.Nombre + "','" + P_Prestamo.Apellido1 + "','" + P_Prestamo.Apellido2 +"','"
+                                        + P_Prestamo.Identificacion + "','" +P_Prestamo.Cantidad + "','" + P_Prestamo.Operacion + "','"  + P_Prestamo.Fechasolicitud + "','" +P_Prestamo.Observacion + "')";
+                         
+
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
         #endregion
 

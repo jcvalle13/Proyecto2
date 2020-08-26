@@ -22,6 +22,8 @@ namespace Entidades
 
         public string Fechasolicitud { get; set; }
 
+        public string Observacion { get; set; }
+
         public ListaRegistroPrestamos()
 
         {
@@ -33,7 +35,7 @@ namespace Entidades
             Cantidad = 0;
             Operacion = 0;
             Fechasolicitud = string.Empty;
-
+            Observacion = string.Empty;
         }
     }
 }
