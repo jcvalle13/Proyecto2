@@ -65,11 +65,29 @@
     <Compile Include="FrmEnvioMail.Designer.cs">
       <DependentUpon>FrmEnvioMail.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListadoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoClientes.Designer.cs">
+      <DependentUpon>FrmListadoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoPrestamo.Designer.cs">
+      <DependentUpon>FrmListadoPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmListadoPrestamos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmListadoPrestamos.Designer.cs">
       <DependentUpon>FrmListadoPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoxEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoxEstado.Designer.cs">
+      <DependentUpon>FrmListadoxEstado.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -129,8 +147,17 @@
     <EmbeddedResource Include="FrmEnvioMail.resx">
       <DependentUpon>FrmEnvioMail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoClientes.resx">
+      <DependentUpon>FrmListadoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoPrestamo.resx">
+      <DependentUpon>FrmListadoPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmListadoPrestamos.resx">
       <DependentUpon>FrmListadoPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoxEstado.resx">
+      <DependentUpon>FrmListadoxEstado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
